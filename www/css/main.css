@@ -10454,6 +10454,10 @@ a:focus {
     display: none;
 }
 
+.sidebar .sidebar-brand .sidebar-brand-img {
+    display: none;
+}
+
 .sidebar hr.sidebar-divider {
     margin: 0 1rem 1rem;
 }
@@ -10524,6 +10528,9 @@ a:focus {
     .sidebar .sidebar-brand .sidebar-brand-text {
         display: inline;
     }
+    .sidebar .sidebar-brand .sidebar-brand-img {
+        display: inline;
+    }
     .sidebar .sidebar-heading {
         text-align: left;
     }
@@ -10577,6 +10584,9 @@ a:focus {
         font-size: 2rem;
     }
     .sidebar.toggled .sidebar-brand .sidebar-brand-text {
+        display: none;
+    }
+    .sidebar.toggled .sidebar-brand .sidebar-brand-img {
         display: none;
     }
     .sidebar.toggled .sidebar-heading {
