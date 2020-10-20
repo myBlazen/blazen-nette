@@ -6,5 +6,10 @@ namespace App\Presenters;
 
 final class HomepagePresenter extends BasePresenter
 {
-
+    protected function beforeRender()
+    {
+        if (!$this->getUser()->isLoggedIn()) {
+            $this->redirect('Sign:in');
+        }
+    }
 }
