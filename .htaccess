@@ -1,1 +1,9 @@
-Require all denied
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^$ blazen/www/ [L]
+RewriteCond %{blazen/www} !-f
+RewriteCond %{blazen/www} !-d
+RewriteCond %{REQUEST_URI} !^/www/
+RewriteRule ^(.*)$ blazen/www/$1
+</IfModule>

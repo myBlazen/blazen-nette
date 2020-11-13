@@ -20,25 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Model/ArticleManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/AuthenticationManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/RegisterUserManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/ResetPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Register/partOne.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Register/partTwo.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Reset/Password.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Email/registerEmail.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/sidebar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/sidebar.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/metadata/categories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/metadata/categories.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/metadata/icons.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/metadata/icons.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/images/blazen-brand.png" beforeDir="false" afterPath="$PROJECT_DIR$/www/images/blazen-brand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,17 +78,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MSMdesign" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\www\blazen\www\images" />
+      <recent name="C:\www\blazen\app\Presenters\templates\Email" />
       <recent name="C:\www\blazen\app\Presenters\templates" />
+      <recent name="C:\www\blazen\www\images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\www\blazen\app" />
+      <recent name="C:\www\blazen\bin" />
+      <recent name="C:\www\blazen\log" />
       <recent name="C:\www\blazen\www\images" />
       <recent name="C:\www\blazen\www" />
     </key>
@@ -114,7 +108,19 @@
       <workItem from="1603071390043" duration="468000" />
       <workItem from="1603071984673" duration="7830000" />
       <workItem from="1603132192762" duration="16027000" />
-      <workItem from="1603150609185" duration="13094000" />
+      <workItem from="1603150609185" duration="13733000" />
+      <workItem from="1603224386225" duration="4997000" />
+      <workItem from="1604018369756" duration="303000" />
+      <workItem from="1604786434778" duration="228000" />
+      <workItem from="1605257584025" duration="11000" />
+      <workItem from="1605257883882" duration="30000" />
+      <workItem from="1605257924732" duration="57000" />
+      <workItem from="1605258268355" duration="87000" />
+      <workItem from="1605258561111" duration="201000" />
+      <workItem from="1605258772216" duration="38000" />
+      <workItem from="1605259482661" duration="1414000" />
+      <workItem from="1605265639095" duration="3071000" />
+      <workItem from="1605271827937" duration="3110000" />
     </task>
     <servers />
   </component>
@@ -142,10 +148,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603074101185" />
-    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603076253778">
+    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603165969498">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603076253778" />
+    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603165969498" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603156080156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -154,10 +160,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603154972214" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1603071422083">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1605258352345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603071422083" />
+    <state x="461" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605258352345" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603072080994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -5,10 +5,15 @@ declare(strict_types=1);
 namespace App\Presenters;
 
 use App\Model\RegisterUserManager;
+use Latte\Engine;
 use Nette\Application\UI\Form;
 use Nette\Database\Context;
 use Nette\Database\UniqueConstraintViolationException;
+use Nette\Mail\Message;
+use Nette\Mail\SendException;
+use Nette\Mail\SendmailMailer;
 use Nette\Security\AuthenticationException;
+use Nette\Security\Passwords;
 
 class RegisterPresenter extends BasePresenter
 {
@@ -23,7 +28,12 @@ class RegisterPresenter extends BasePresenter
     private $registerUserManager;
     private $passwords;
 
-    public function __construct(Context $database, RegisterUserManager $registerUserManager, \Nette\Security\Passwords $passwords)
+    public function __construct
+    (
+        Context $database,
+        RegisterUserManager $registerUserManager,
+        Passwords $passwords
+    )
     {
         $this->database = $database;
         $this->registerUserManager = $registerUserManager;
@@ -61,6 +71,25 @@ class RegisterPresenter extends BasePresenter
 
     public function RegisterFormSucceeded(Form $form, \stdClass $values): void
     {
+        $latte = new Engine();
+        $mail = new Message();
+
+        $params = [
+          'username' => $values->username
+        ];
+
+        $mail ->setFrom('my.blazen@gmail.com', 'BLAZEN')
+            ->addTo($values->email)
+            ->setSubject('NoReplay - BLAZEN registration')
+            ->setHtmlBody(
+                $latte->renderToString(__DIR__.'/templates/Email/registerEmail.latte', $params)
+            );
+
+        $mailer = new SendmailMailer();
+        $mailer->send($mail);
+
+
+
         try{
             $this->database->table('users')->insert([
                 'password'  => $this->passwords->hash($values->password),
@@ -69,13 +98,10 @@ class RegisterPresenter extends BasePresenter
                 'firstname' => $values->firstname,
                 'username'  => $values->username,
             ]);
+            $this->redirect('Homepage:');
         }catch (UniqueConstraintViolationException $e){
             $this->flashMessage('User already exists');
         }
-
-
-//        $this->registerUserManager->insertUserIntoDatabase($values);
-//        $this->redirect('Homepage:');
     }
 
 }
