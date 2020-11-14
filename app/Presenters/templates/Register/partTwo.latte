@@ -1,0 +1,62 @@
+{block content}
+<body class="bg-gradient-primary">
+
+<div class="container">
+
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">
+                                Complete an Account!
+                            </h1>
+                        </div>
+                        <form class="user" n:name="registerFormPassword">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <label n:name="password" class="w-100 m-0">
+                                        <input n:name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label n:name="repeat_password" class="w-100 m-0">
+                                        <input n:name="repeat_password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label n:name="username" class="w-100 m-0">
+                                    <input n:name="username" class="form-control form-control-user" id="exampleInputEmail" placeholder="Username">
+                                </label>
+                            </div>
+
+                            <label class="w-100 m-0 mt-3">
+                                <input n:name="registerPassword" class="btn btn-primary btn-user btn-block">
+                            </label>
+
+                            <hr>
+                        </form>
+
+                        <p class="text-gray-900 mb-5">
+                            You will use this information to log in later on!
+                        </p>
+
+                        <div class="text-center">
+                            <a class="small" n:href="Reset:password">Forgot Password?</a>
+                        </div>
+                        <div class="text-center">
+                            <a class="small" n:href="Sign:in">Already have an account? Login!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
