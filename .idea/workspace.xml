@@ -20,29 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Email/registerCompleteEmail.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/blazen-brand-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Email/passwordRecoveryEmail.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/up.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/config.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Email/registerEmail.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Email/registerEmail.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Register/partOne.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Register/partOne.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Register/partTwo.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Register/partTwo.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Bridges/HttpDI/HttpExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Bridges/HttpDI/HttpExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/Context.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/Context.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/FileUpload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/FileUpload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/Helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/Helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/IResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/IResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/RequestFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/RequestFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/Response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/SessionSection.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/SessionSection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/Url.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/Url.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/http/src/Http/UrlImmutable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nette/http/src/Http/UrlImmutable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/RegisterPresenter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/ResetPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/ResetPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Register/partOne.latte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Register/partTwo.latte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Reset/Password.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Reset/Password.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +74,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1j4lkYrBEkhC6mnHdxrVbjs6nbB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -92,7 +86,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MarbaxSocialMedia" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -136,7 +130,9 @@
       <workItem from="1605265639095" duration="3071000" />
       <workItem from="1605271827937" duration="8388000" />
       <workItem from="1605284881839" duration="6695000" />
-      <workItem from="1605326793318" duration="22113000" />
+      <workItem from="1605326793318" duration="29812000" />
+      <workItem from="1605420124728" duration="6220000" />
+      <workItem from="1605434042631" duration="11773000" />
     </task>
     <servers />
   </component>
@@ -168,10 +164,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605286060565" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603156080156">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605444110100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603156080156" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605444110100" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605340162484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -188,10 +184,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605336348236" />
-    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1603076435756">
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1605354450888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="585" height="534" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603076435756" />
+    <state x="667" y="253" width="585" height="534" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605354450888" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1603161331022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
