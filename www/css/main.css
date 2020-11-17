@@ -10858,9 +10858,9 @@ form.user .form-control-user {
 }
 
 form.user .comment{
-    font-size: 0.8rem;
-    border-radius: 10rem;
-    padding: 1.2rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    padding: 0.5rem 0.8rem;
 }
 
 form.user .btn-user {

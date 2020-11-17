@@ -107,3 +107,14 @@ $(document).ready(function () {
     }
 });
 
+//-------------------------------------------AutosizeCommentTextarea--------------------------------------------------->
+
+autosize(document.getElementsByClassName("comment-textarea"));
+
+$('.comment-textarea').keypress(function(e){
+    if(e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        this.form.submit();
+    }
+});
+

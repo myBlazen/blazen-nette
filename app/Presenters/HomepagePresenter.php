@@ -45,6 +45,7 @@ final class HomepagePresenter extends BasePresenter
     public function renderDefault():void
     {
         $this->template->wall_posts = $this->postManager->getPublicPosts();
+        bdump($this->postManager->getPublicPosts());
     }
 
 
@@ -86,6 +87,43 @@ final class HomepagePresenter extends BasePresenter
 
     }
 
+    /**
+     * @return Form
+     */
+    protected function createComponentCommentPostForm(): Form
+    {
+        $form = new Form;
 
+        $form->addHidden('user_id', $this->getUser()->getId())
+            ->setRequired();
+
+        $form->addHidden('wall_post_id')
+            ->setRequired();
+
+        $form->addTextArea('comment_content', 'Comment')
+            ->setRequired();
+
+        $form->addSubmit('commentPost', 'Comment');
+
+        $form->onSuccess[] = [$this, 'commentPostFormSucceeded'];
+
+        return $form;
+    }
+
+    /**
+     * @param Form $form
+     * @param array $values
+     */
+    public function commentPostFormSucceeded(Form $form, array $values): void
+    {
+        $this->database->table('comments')->insert($values);
+
+        $values = null;
+
+        $this->flashMessage('Comment was published');
+
+        $this->redirect('Homepage:');
+
+    }
 
 }
