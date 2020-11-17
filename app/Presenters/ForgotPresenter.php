@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Presenters;
 
-use App\Model\RegisterUserManager;
 use Nette\Application\AbortException;
 use Nette\Database\Context;
 use Nette\Http\Url;
@@ -16,7 +15,7 @@ use Nette\Mail\SendException;
 use Nette\Mail\SendmailMailer;
 use Nette\Security\Passwords;
 
-final class ResetPresenter extends BasePresenter
+final class ForgotPresenter extends BasePresenter
 {
 
     /**

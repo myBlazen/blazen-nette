@@ -20,12 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Presenters/ForgotPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/forgot/password.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/PostManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/PostManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/RegisterUserManager.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/ResetPresenter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Reset/Password.latte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/up.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/up.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/post.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/post.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +133,8 @@
       <workItem from="1605503575134" duration="23402000" />
       <workItem from="1605529202410" duration="105000" />
       <workItem from="1605535560984" duration="595000" />
-      <workItem from="1605593304038" duration="15671000" />
+      <workItem from="1605593304038" duration="17639000" />
+      <workItem from="1605627766567" duration="2495000" />
     </task>
     <servers />
   </component>

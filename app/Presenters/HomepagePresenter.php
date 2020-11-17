@@ -45,7 +45,6 @@ final class HomepagePresenter extends BasePresenter
     public function renderDefault():void
     {
         $this->template->wall_posts = $this->postManager->getPublicPosts();
-        bdump($this->postManager->getPublicPosts());
     }
 
 
