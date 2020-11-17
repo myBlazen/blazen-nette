@@ -20,5 +20,5 @@ di:
 services:
 	router: App\Router\RouterFactory::createRouter
 	authenticator: App\Model\AuthenticationManager
-	- App\Model\ArticleManager
+	- App\Model\PostManager
 	- App\Model\RegisterUserManager

@@ -1,12 +1,12 @@
 
-<div class="card shadow mb-4">
+<div n:foreach="$wall_posts as $wall_post" class="card shadow mb-4" id="{$wall_post->wall_post_title}">
     <!-- Card Header - Dropdown -->
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
         <div class="d-flex">
             <img class="img-profile rounded-circle mr-3" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" height="50px" width="50px" alt="profile img">
             <div>
-                <a href="#"><h7 class="m-0 font-weight-bold text-primary">Ondřej Kučera</h7></a>
-                <p class="card-link m-0"><small class="text-muted">říjen 14. včera</small></p>
+                <a href="#"><h7 class="m-0 font-weight-bold text-primary">{$wall_post->firstname} {$wall_post->lastname}</h7></a>
+                <p class="card-link m-0"><small class="text-muted">{$wall_post->wall_post_created_at|date:'F j, Y'}</small></p>
             </div>
         </div>
         <div class="dropdown no-arrow">
@@ -14,38 +14,34 @@
                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                <div class="dropdown-header">Dropdown Header:</div>
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-header">Options:</div>
+                <a class="dropdown-item">Edit</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Hide</a>
+                <a class="dropdown-item" href="#">Delete</a>
             </div>
         </div>
     </div>
     <!-- Card Body -->
     <div class="card-body">
-        <h5 class="card-title"><a href="#">Tohle je nadpis píčo</a></h5>
+        <h5 class="card-title"><a href="#">{$wall_post->wall_post_title} </a></h5>
         <div class="dropdown-divider"></div>
-        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-            of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-            also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-            1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p class="card-text">{$wall_post->wall_post_content}</p>
     </div>
     <hr class="mb-0">
     <div class="card-header">
-        <div class="d-flex justify-content-between">
-            <div class="likes ml-0 ml-lg-5">
-                <a href="#"><i class="fas fa-thumbs-up mr-2"></i>likes</a>
-            </div>
-            <div class="comment">
-                <a href="#"><i class="fas fa-comment mr-2"></i>comment</a>
-            </div>
-            <div class="share mr-0 mr-lg-5">
-                <a href="#"><i class="fas fa-share mr-2"></i>share</a>
-            </div>
-        </div>
+
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="nav-link py-0" href="#"><i class="fas fa-thumbs-up mr-2"></i>28 like</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-0" href="#"><i class="fas fa-comment mr-2"></i>16 comment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-0" href="#"><i class="fas fa-share mr-2"></i>share</a>
+            </li>
+        </ul>
         <!-- comment -->
         <hr>
         <div class="comments">

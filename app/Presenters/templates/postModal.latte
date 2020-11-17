@@ -1,0 +1,38 @@
+
+<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">What is in your mind?</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form n:name="addPostForm" class="w-100 user" autocomplete="off">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label n:name="wall_post_title" class="w-100">
+                            <input n:name="wall_post_title" type="text" class="form-control" id="exampleInputEmail" placeholder="Title">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label n:name="wall_post_content" class="w-100">
+                            <textarea n:name="wall_post_content" class="form-control" id="message-text" placeholder="Write your text here"></textarea>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <label class="">
+                        <input class="btn btn-secondary" value="Close" data-dismiss="modal">
+                    </label>
+                    <label class="">
+                        <input n:name="publishPost" class="btn btn-primary">
+                    </label>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

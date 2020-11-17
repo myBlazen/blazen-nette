@@ -1,3 +1,9 @@
+
+
+
+
+
+//-----------------------------------------------SIDEBAR--------------------------------------------------------------->
 (function($) {
     "use strict"; // Start of use strict
 
@@ -67,6 +73,7 @@
         }
     });
 
+//-----------------------------------------------TOTOPSCROLL----------------------------------------------------------->
     // Scroll to top button appear
     $(document).on('scroll', function() {
         var scrollDistance = $(this).scrollTop();
@@ -87,3 +94,16 @@
     });
 
 })(jQuery); // End of use strict
+
+//-------------------------------------------SameScrollLevelOnRefresh-------------------------------------------------->
+
+
+$(window).scroll(function () {
+    sessionStorage.scrollTop = $(this).scrollTop();
+});
+$(document).ready(function () {
+    if (sessionStorage.scrollTop != "undefined") {
+        $(window).scrollTop(sessionStorage.scrollTop);
+    }
+});
+

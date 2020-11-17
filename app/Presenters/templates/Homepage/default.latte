@@ -5,52 +5,54 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Homepage</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-        </div>
-        <div class="row">
-            <div class="col-lg-7">
+{*        <div class="d-sm-flex align-items-center justify-content-between mb-4">*}
+{*            <h1 class="h3 mb-0 text-gray-800">Homepage</h1>*}
+{*            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>*}
+{*        </div>*}
+
+
+
+        <!-- Content Row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+
                 <div class="card shadow mb-4">
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 flex-row align-items-center justify-content-between">
                         <div class="d-flex">
                             <img class="img-profile rounded-circle mr-3" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" height="50px" width="50px" alt="profile img">
-                            <form class="w-100 user">
+                            <form class="w-100 user" data-toggle="modal" data-target="#postModal">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Co se vám honí havou?">
+                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="What is in your mind?">
                                 </div>
                             </form>
                         </div>
-                        <hr>
+                        <hr class="m-0">
                         <div class="">
-                            <div class="d-flex justify-content-between">
-                                <div class="add-image ml-0 ml-lg-5">
-                                    <a href="#">Přidat Fotku</a>
-                                </div>
-                                <div class="mark-user">
-                                    <a href="#">Označit přítele</a>
-                                </div>
-                                <div class="activity mr-0 mr-lg-5">
-                                    <a href="#">Aktivita</a>
-                                </div>
-                            </div>
+
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Add photo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Mark Friend</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Activity</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Content Row -->
-        <div class="row">
-            <div class="col-lg-7">
+
+                {include '../postModal.latte'}
+
+
                 <!-- Wall Post -->
                 {include '../post.latte'}
-                {include '../post.latte'}
-                {include '../post.latte'}
-                {include '../post.latte'}
-                {include '../post.latte'}
-                {include '../post.latte'}
+
+
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex flex-row justify-content-end">
                         <a href="#"> Další příspěvky...</a>
