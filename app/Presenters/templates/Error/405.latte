@@ -1,6 +1,15 @@
 {block content}
-<h1 n:block=title>Method Not Allowed</h1>
 
-<p>The requested method is not allowed for the URL.</p>
+<div class="invisible" n:block=title>Method Not Allowed</div>
 
-<p><small>error 405</small></p>
+<div class="container-fluid py-5">
+
+    <!-- 404 Error Text -->
+    <div class="text-center">
+        <div class="error mx-auto" data-text="405">405</div>
+        <p class="lead text-gray-800 mb-5">Method Not Allowed</p>
+        <p class="text-gray-500 mb-0">The requested method is not allowed for the URL.</p>
+        <a n:href="Homepage:">&larr; Back to homepage</a>
+    </div>
+
+</div>

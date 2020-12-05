@@ -21,6 +21,10 @@ class PostManager
         $this->database = $database;
     }
 
+
+
+//--------------------------------------------------------------------------------------------------------------------->
+
     /**
      * @return Nette\Database\IRow[]
      */
@@ -31,12 +35,23 @@ class PostManager
                    p.wall_post_id,
                    p.wall_post_title,
                    p.wall_post_created_at,
+                   p.hidden,
                    u.firstname AS post_firstname,
-                   u.lastname AS post_lastname
+                   u.lastname AS post_lastname,
+                   u.user_id AS post_user_id
             FROM wall_posts p
             LEFT JOIN users u ON u.user_id = p.user_id
+            WHERE 
+                p.deleted = false
+                AND  
+                p.hidden = false
             ORDER BY p.wall_post_created_at DESC
         ')->fetchAll();
+
+
+        if(!$posts){
+            return null;
+        }
 
         foreach($posts as $post){
             $post->comments = $this->getPostComments($post->wall_post_id);
@@ -44,6 +59,10 @@ class PostManager
         }
         return $posts;
     }
+
+
+//--------------------------------------------------------------------------------------------------------------------->
+
 
     /**
      * @param int $wall_post_id
@@ -65,24 +84,128 @@ class PostManager
         )->fetchAll();
     }
 
+//--------------------------------------------------------------------------------------------------------------------->
+
+
     /**
      * @param int $wall_post_id
+     * @param bool $comments
      * @return Nette\Database\IRow[]
      */
-    public function getPublicPostById(int $wall_post_id)
+    public function getPublicPostById(int $wall_post_id, bool $comments = true)
     {
-        return $this->database->query("
-        SELECT  wall_posts.wall_post_id,
-                wall_posts.wall_post_title,
-                wall_posts.wall_post_content,
-                wall_posts.wall_post_created_at,
-                wall_posts.user_id,
-                users.firstname,
-                users.lastname
-        FROM    wall_posts
-        JOIN users ON wall_posts.user_id = users.user_id
-        WHERE wall_post_id = '$wall_post_id'
+
+        $post = $this->database->query("
+            SELECT p.wall_post_content,
+                   p.wall_post_id,
+                   p.wall_post_title,
+                   p.wall_post_created_at,
+                   p.hidden,
+                   u.firstname AS post_firstname,
+                   u.lastname AS post_lastname,
+                   u.user_id AS post_user_id
+            FROM wall_posts p
+            LEFT JOIN users u ON u.user_id = p.user_id
+            WHERE 
+                p.deleted = false
+                AND
+                p.wall_post_id = '$wall_post_id'
+            ORDER BY p.wall_post_created_at DESC
         ")->fetchAll();
+
+        if(!$post){
+            return null;
+        }
+
+        if($comments){
+            $post['comments'] = $this->getPostComments($wall_post_id);
+        }
+        return $post;
+
+    }
+
+
+//--------------------------------------------------------------------------------------------------------------------->
+    /**
+     * @param int $user_id
+     * @param bool $comments
+     * @return Nette\Database\IRow[]
+     */
+    public function getPublicPostsByUser(int $user_id, bool $comments = true)
+    {
+        $posts = $this->database->query("
+            SELECT p.wall_post_content,
+                   p.wall_post_id,
+                   p.wall_post_title,
+                   p.wall_post_created_at,
+                   p.hidden,
+                   u.firstname AS post_firstname,
+                   u.lastname AS post_lastname,
+                   u.user_id AS post_user_id
+            FROM wall_posts p
+            LEFT JOIN users u ON u.user_id = p.user_id
+            WHERE 
+                p.deleted = false
+                AND
+                p.hidden = false
+                AND
+                p.user_id = '$user_id'
+            ORDER BY p.wall_post_created_at DESC
+        ")->fetchAll();
+
+        if(!$posts){
+            return null;
+        }
+
+        if($comments){
+            foreach($posts as $post){
+                $post->comments = $this->getPostComments($post->wall_post_id);
+
+            }
+        }
+
+        return $posts;
+    }
+
+
+    //--------------------------------------------------------------------------------------------------------------------->
+    /**
+     * @param int $user_id
+     * @param bool $comments
+     * @return Nette\Database\IRow[]
+     */
+    public function getPostsByUser(int $user_id, bool $comments = true)
+    {
+        $posts = $this->database->query("
+            SELECT p.wall_post_content,
+                   p.wall_post_id,
+                   p.wall_post_title,
+                   p.wall_post_created_at,
+                   p.hidden,
+                   u.firstname AS post_firstname,
+                   u.lastname AS post_lastname,
+                   u.user_id AS post_user_id
+            FROM wall_posts p
+            LEFT JOIN users u ON u.user_id = p.user_id
+            WHERE 
+                p.deleted = false
+                AND
+                p.user_id = '$user_id'
+            ORDER BY p.wall_post_created_at DESC
+        ")->fetchAll();
+
+        if(!$posts){
+            return null;
+        }
+
+        if($comments){
+            foreach($posts as $post){
+                $post->comments = $this->getPostComments($post->wall_post_id);
+
+            }
+        }
+
+        return $posts;
     }
 
 

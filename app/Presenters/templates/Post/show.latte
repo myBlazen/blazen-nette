@@ -1,0 +1,115 @@
+{block content}
+{if $wall_post[0]['hidden'] && !$presenter->isPostOwner($wall_post[0]['post_user_id'])}
+
+    <div class="invisible" n:block=title>Post Not Found</div>
+
+    <div class="container-fluid py-5">
+
+        <!-- 404 Error Text -->
+        <div class="text-center">
+            <div class="error mx-auto" data-text="404">404</div>
+            <p class="lead text-gray-800 mb-5">Post Not Found</p>
+            <p class="text-gray-500 mb-0">Too late! This post has been hidden or deleted...</p>
+            <a n:href="Homepage:">&larr; Back to homepage</a>
+        </div>
+
+    </div>
+
+{else}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow mb-4" >
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <div class="d-flex">
+                        <img class="img-profile rounded-circle mr-3" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" height="50px" width="50px" alt="profile img">
+                        <div>
+                            <a href="#"><h7 class="m-0 font-weight-bold text-primary">{$wall_post[0]['post_firstname']} {$wall_post[0]['post_firstname']}</h7></a>
+                            <small class="text-muted" n:if="$wall_post[0]['hidden']">Hidden</small>
+                            <p class="card-link m-0"><small class="text-muted">{$wall_post[0]['wall_post_created_at']|date:'F j, Y'}</small></p>
+                        </div>
+                    </div>
+                    <div class="dropdown no-arrow" n:if="$presenter->isPostOwner($wall_post[0]['post_user_id'])">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">Options:</div>
+                            <a class="dropdown-item" n:href="edit $wall_post[0]['wall_post_id']">Edit</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" n:if="!$wall_post[0]['hidden']" n:href="Post:hide $wall_post[0]['wall_post_id'], $wall_post[0]['post_user_id']">Hide</a>
+                            <a class="dropdown-item" n:if="$wall_post[0]['hidden']" n:href="Post:publish $wall_post[0]['wall_post_id'], $wall_post[0]['post_user_id']">Publish</a>
+                            <a class="dropdown-item" n:href="Post:delete $wall_post[0]['wall_post_id'], $wall_post[0]['post_user_id']">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <h5 class="card-title"><a n:href = "Post:show $wall_post[0]['wall_post_id']">{$wall_post[0]['wall_post_title']} </a></h5>
+                    <div class="dropdown-divider"></div>
+                    <p class="card-text">{$wall_post[0]['wall_post_content']}</p>
+                </div>
+                <hr class="mb-0">
+                <div class="card-header">
+
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#"><i class="fas fa-thumbs-up mr-2"></i>like</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#"><i class="fas fa-comment mr-2"></i>comment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#"><i class="fas fa-share mr-2"></i>share</a>
+                        </li>
+                    </ul>
+                    <!-- comment -->
+                    <hr>
+                    <div class="comments">
+
+                        <!-- comment -->
+                        <div n:foreach="$wall_post['comments'] as $comment">
+                            <div class=" d-flex">
+                                <img class="img-profile rounded-circle mr-3" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" height="50px" width="50px" alt="profile img">
+                                <div class="comment">
+                                    <a href="#"><h7 class="m-0 font-weight-bold text-primary">{$comment['comment_firstname']} {$comment['comment_lastname']}</h7></a>
+                                    <p class="card-link mb-2">
+                                        {$comment['comment_content']}
+                                    </p>
+                                    <div class="d-flex justify-content-start">
+                                        <div class="likes mr-2">
+                                            <a href="#">like</a>
+                                        </div>
+                                        <div class="answers mr-2">
+                                            <a href="#">Odpovědět</a>
+                                        </div>
+                                        <div class="comment-time mr-2">
+                                            <a href="#">{$comment['comment_created_at']|date:'%d.%m.%Y'}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <!-- comment -->
+
+                    <div class="d-flex">
+                        <img class="img-profile rounded-circle mr-3" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" height="40px" width="40px" alt="profile img">
+                        <form n:name="commentPostForm" class="w-100 user">
+                            <input n:name="wall_post_id" value="{$wall_post[0]['wall_post_id']}">
+                            <div class="form-group m-0">
+                                <label class="w-100">
+                                    <textarea n:name="comment_content" class="form-control comment comment-textarea" placeholder="Comment..." autocomplete="off"></textarea>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/if}

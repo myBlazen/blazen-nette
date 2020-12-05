@@ -20,17 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/ForgotPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/forgot/password.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Post/edit.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/statistics.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/loading.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/RegisterUserManager.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/PostManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/PostManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/ResetPresenter.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Reset/Password.latte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/up.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/up.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Error/403.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Error/403.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Error/404.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Error/404.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Error/405.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Error/405.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Error/410.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Error/410.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Error/4xx.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Error/4xx.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/forgot/password.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Forgot/password.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/post.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/post.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/user/profile.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/js/v4-shims.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/js/v4-shims.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/js/v4-shims.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/js/v4-shims.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/metadata/categories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/metadata/categories.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/metadata/icons.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/metadata/icons.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/metadata/sponsors.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/metadata/sponsors.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,23 +100,23 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MarbaxSocialMedia" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\www\blazen\app\Presenters\templates\Email" />
-      <recent name="C:\www\blazen\app\Presenters\templates" />
-      <recent name="C:\www\blazen\www\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\www\blazen\www\images" />
       <recent name="C:\www\blazen\app\Presenters\templates\Email" />
       <recent name="C:\www\blazen\app" />
       <recent name="C:\www\blazen\bin" />
       <recent name="C:\www\blazen\log" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\www\blazen\app\Presenters\templates\Email" />
+      <recent name="C:\www\blazen\app\Presenters\templates" />
+      <recent name="C:\www\blazen\www\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -134,7 +151,13 @@
       <workItem from="1605529202410" duration="105000" />
       <workItem from="1605535560984" duration="595000" />
       <workItem from="1605593304038" duration="17639000" />
-      <workItem from="1605627766567" duration="2495000" />
+      <workItem from="1605627766567" duration="5814000" />
+      <workItem from="1605642473611" duration="739000" />
+      <workItem from="1605681034167" duration="9416000" />
+      <workItem from="1605783708010" duration="4177000" />
+      <workItem from="1605796902746" duration="2933000" />
+      <workItem from="1607150022265" duration="1351000" />
+      <workItem from="1607151431876" duration="22236000" />
     </task>
     <servers />
   </component>
@@ -162,22 +185,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="780" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605517422892" />
-    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605286060565">
+    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605630340654">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605286060565" />
+    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605630340654" />
     <state x="808" y="306" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605516776660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="306" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605516776660" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605515304567">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605703409978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605515304567" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605340162484">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605703409978" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607160746618">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605340162484" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160746618" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607150321205">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607150321205" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1605258352345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -186,21 +213,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603072080994" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605336348236">
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605699543788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605336348236" />
-    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1605595749121">
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605699543788" />
+    <state x="495" y="133" width="1165" height="737" key="find.popup" timestamp="1607173378404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="585" height="534" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605595749121" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1605512917346">
+    <state x="495" y="133" width="1165" height="737" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607173378404" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1607152513964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605512917346" />
-    <state x="623" y="225" key="search.everywhere.popup" timestamp="1603144337277">
+    <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607152513964" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607155085949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603144337277" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607155085949" />
   </component>
 </project>

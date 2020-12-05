@@ -52,4 +52,17 @@ abstract class BasePresenter extends Presenter
     {
         return $this->getHttpRequest()->getUrl()->getQueryParameter('hash');
     }
+
+    /**
+     * @param $post_user_id
+     * @return bool
+     */
+    public function isPostOwner($post_user_id):bool
+    {
+        if($post_user_id == $this->getUser()->getId()){
+            return true;
+        }
+        return false;
+    }
+
 }

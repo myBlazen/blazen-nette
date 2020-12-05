@@ -119,3 +119,14 @@ $('.comment-textarea').keypress(function(e){
     }
 });
 
+//--------------------------------------------------Parallex----------------------------------------------------------->
+
+
+//-----------------------------------------------------LOADING--------------------------------------------------------->
+if (document.documentElement) {
+    document.documentElement.className = 'loading';
+}
+
+$(document).ready(function() {
+    $(document.documentElement).removeClass('loading');
+});

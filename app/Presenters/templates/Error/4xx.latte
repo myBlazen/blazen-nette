@@ -1,4 +1,15 @@
 {block content}
-<h1 n:block=title>Oops...</h1>
 
-<p>Your browser sent a request that this server could not understand or process.</p>
+<div class="invisible" n:block=title>Oops...</div>
+
+<div class="container-fluid py-5">
+
+    <!-- 404 Error Text -->
+    <div class="text-center">
+        <div class="error mx-auto" data-text="400">400</div>
+        <p class="lead text-gray-800 mb-5">Bad Request</p>
+        <p class="text-gray-500 mb-0">Your browser sent a request that this server could not understand or process.</p>
+        <a n:href="Homepage:">&larr; Back to homepage</a>
+    </div>
+
+</div>

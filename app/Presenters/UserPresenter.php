@@ -1,26 +1,15 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Presenters;
 
 use Nette;
 use App\Model\PostManager;
 use Nette\ComponentModel\IComponent;
-use Nette\Application\UI\Form;
+use \Nette\Application\UI\Form;
+use Nette\Utils\Image;
 
-final class HomepagePresenter extends BasePresenter
+class UserPresenter extends BasePresenter
 {
-    /**
-     * @throws \Nette\Application\AbortException
-     */
-    protected function beforeRender()
-    {
-        if (!$this->getUser()->isLoggedIn()) {
-            $this->redirect('Sign:in');
-        }
-    }
-
     /**
      * @var Nette\Database\Context
      */
@@ -42,48 +31,60 @@ final class HomepagePresenter extends BasePresenter
     }
 
 
-    public function renderDefault():void
+    /**
+     * @throws \Nette\Application\AbortException
+     */
+    protected function startup()
     {
-        $this->template->wall_posts = $this->postManager->getPublicPosts();
+        parent::startup();
+
+        if (!$this->user->isLoggedIn()) {
+            if ($this->user->logoutReason === Nette\Http\UserStorage::INACTIVITY) {
+                $this->flashMessage('You have been signed out due to inactivity. Please sign in again.');
+            }
+            $this->redirect('Sign:in', ['backlink' => $this->storeRequest()]);
+        }
+    }
+
+
+    public function RenderProfile(): void
+    {
+        $this->template->wall_posts = $this->postManager->getPostsByUser($this->getUser()->getId(),true);
     }
 
 
     /**
      * @return Form
      */
-    protected function createComponentAddPostForm(): Form
+    protected function createComponentUploadImageForm(): Form
     {
-        $form = new Form;
+        $form = new Form();
 
         $form->addHidden('user_id', $this->getUser()->getId());
 
-        $form->addText('wall_post_title', 'Title')
-            ->setRequired();
+        $form->addUpload('image','images');
 
-        $form->addTextArea('wall_post_content', 'Write your text here')
-            ->setRequired();
+        $form->addSubmit('uploadImage', 'Upload Image');
 
-        $form->addSubmit('publishPost', 'Publish post');
-
-        $form->onSuccess[] = [$this, 'AddPostFormSucceeded'];
+        $form->onSuccess[] = [$this, 'uploadImageSucceeded'];
 
         return $form;
     }
 
     /**
      * @param Form $form
-     * @param array $values
-     * @throws Nette\Application\AbortException
+     * @param \stdClass $values
      */
-    public function AddPostFormSucceeded(Form $form, array $values): void
+    public function uploadImageSucceeded(Form $form, \stdClass $values): void
     {
-        $this->database->table('wall_posts')->insert($values);
 
-        $values = null;
+        $path = "www/images/" . $values->user_id . "/profileImage/" . $values->image->file->getName();
 
-        $this->flashMessage('Post was published');
+        $values->image->file->move($path);
 
-        $this->redirect('Homepage:');
+        $this->flashMessage($path);
+
+//        $this->redirect('User:settings');
 
     }
 
@@ -113,7 +114,6 @@ final class HomepagePresenter extends BasePresenter
     /**
      * @param Form $form
      * @param array $values
-     * @throws Nette\Application\AbortException
      */
     public function commentPostFormSucceeded(Form $form, array $values): void
     {
@@ -123,8 +123,13 @@ final class HomepagePresenter extends BasePresenter
 
         $this->flashMessage('Comment was published');
 
-        $this->redirect('Homepage:');
+        $this->redirect('User:profile');
 
     }
+
+
+
+
+
 
 }

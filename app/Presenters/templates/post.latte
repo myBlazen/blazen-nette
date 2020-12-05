@@ -1,30 +1,32 @@
 
-<div n:foreach="$wall_posts as $wall_post" class="card shadow mb-4" id="{$wall_post->wall_post_title}">
+<div n:foreach="$wall_posts as $wall_post" class="card shadow mb-4" id="{$wall_post->wall_post_id}">
     <!-- Card Header - Dropdown -->
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
         <div class="d-flex">
             <img class="img-profile rounded-circle mr-3" src="https://source.unsplash.com/QAB-WJcbgJk/60x60" height="50px" width="50px" alt="profile img">
             <div>
                 <a href="#"><h7 class="m-0 font-weight-bold text-primary">{$wall_post->post_firstname} {$wall_post->post_lastname}</h7></a>
+                <small class="text-muted" n:if="$wall_post->hidden">Hidden</small>
                 <p class="card-link m-0"><small class="text-muted">{$wall_post->wall_post_created_at|date:'F j, Y'}</small></p>
             </div>
         </div>
-        <div class="dropdown no-arrow">
+        <div class="dropdown no-arrow" n:if="$presenter->isPostOwner($wall_post->post_user_id)">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                 <div class="dropdown-header">Options:</div>
-                <a class="dropdown-item">Edit</a>
+                <a class="dropdown-item" n:href="Post:edit $wall_post->wall_post_id">Edit</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Hide</a>
-                <a class="dropdown-item" href="#">Delete</a>
+                <a class="dropdown-item" n:if="!$wall_post->hidden" n:href="Post:hide $wall_post->wall_post_id, $wall_post->post_user_id">Hide</a>
+                <a class="dropdown-item" n:if="$wall_post->hidden" n:href="Post:publish $wall_post->wall_post_id, $wall_post->post_user_id">Publish</a>
+                <a class="dropdown-item" n:href="Post:delete $wall_post->wall_post_id, $wall_post->post_user_id">Delete</a>
             </div>
         </div>
     </div>
     <!-- Card Body -->
     <div class="card-body">
-        <h5 class="card-title"><a href="#">{$wall_post->wall_post_title} </a></h5>
+        <h5 class="card-title"><a n:href = "Post:show $wall_post->wall_post_id">{$wall_post->wall_post_title} </a></h5>
         <div class="dropdown-divider"></div>
         <p class="card-text">{$wall_post->wall_post_content}</p>
     </div>

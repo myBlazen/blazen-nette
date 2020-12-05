@@ -11254,3 +11254,14 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
     width: 100%;
 }
+
+
+
+.loading > body > * {
+    display:none;
+    transition: .5s;
+}
+.loading body {
+    background:#fff url(../images/loading.gif) no-repeat 50% 50%;
+    transition: .5s;
+}
