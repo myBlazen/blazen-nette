@@ -153,7 +153,8 @@
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                     {$user->getIdentity()->data[firstname]} {$user->getIdentity()->data[lastname]}
                 </span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <img n:if="$userData->user_profile_img_path != null" class="img-profile rounded-circle" src="{$basePath . $userData->user_profile_img_path}">
+                <img n:if="$userData->user_profile_img_path == null" class="img-profile rounded-circle" src="{$basePath}/images/profile-pic-placeholder.png">
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

@@ -20,35 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Post/edit.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/statistics.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/www/users_images/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/PostManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/PostManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/ForgotPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/ForgotPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Error/403.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Error/403.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Error/404.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Error/404.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Error/405.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Error/405.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Error/410.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Error/410.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Error/4xx.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Error/4xx.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/forgot/password.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Forgot/password.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/post.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/post.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/user/profile.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/js/v4-shims.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/js/v4-shims.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/js/v4-shims.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/js/v4-shims.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/metadata/categories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/metadata/categories.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/metadata/icons.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/metadata/icons.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/metadata/sponsors.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/metadata/sponsors.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +82,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -106,17 +93,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\www\blazen\www\users_images" />
+      <recent name="C:\www\blazen\app\Presenters\templates\Email" />
+      <recent name="C:\www\blazen\app\Presenters\templates" />
+      <recent name="C:\www\blazen\www\images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\www\blazen\www\images" />
       <recent name="C:\www\blazen\app\Presenters\templates\Email" />
       <recent name="C:\www\blazen\app" />
       <recent name="C:\www\blazen\bin" />
       <recent name="C:\www\blazen\log" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\www\blazen\app\Presenters\templates\Email" />
-      <recent name="C:\www\blazen\app\Presenters\templates" />
-      <recent name="C:\www\blazen\www\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -157,7 +145,7 @@
       <workItem from="1605783708010" duration="4177000" />
       <workItem from="1605796902746" duration="2933000" />
       <workItem from="1607150022265" duration="1351000" />
-      <workItem from="1607151431876" duration="22236000" />
+      <workItem from="1607151431876" duration="32907000" />
     </task>
     <servers />
   </component>
@@ -197,10 +185,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605703409978" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607160746618">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607181463441">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607160746618" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607181463441" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607150321205">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

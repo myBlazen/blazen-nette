@@ -5,7 +5,7 @@ namespace App\Presenters;
 use Nette;
 use App\Model\PostManager;
 use Nette\ComponentModel\IComponent;
-use \Nette\Application\UI\Form;
+use Nette\Application\UI\Form;
 use Nette\Utils\Image;
 
 class UserPresenter extends BasePresenter
@@ -26,6 +26,7 @@ class UserPresenter extends BasePresenter
      */
     public function __construct(Nette\Database\Context $database, PostManager $postManager)
     {
+        parent::__construct($database);
         $this->database = $database;
         $this->postManager = $postManager;
     }
@@ -62,7 +63,10 @@ class UserPresenter extends BasePresenter
 
         $form->addHidden('user_id', $this->getUser()->getId());
 
-        $form->addUpload('image','images');
+        $form->addUpload('image','images')
+            ->setRequired()
+            ->addRule($form::IMAGE, 'Please select file format JPEG, PNG or GIF.')
+            ->addRule($form::MAX_FILE_SIZE, 'Maximum size is 1 MB.', 1024 * 1024);
 
         $form->addSubmit('uploadImage', 'Upload Image');
 
@@ -77,15 +81,20 @@ class UserPresenter extends BasePresenter
      */
     public function uploadImageSucceeded(Form $form, \stdClass $values): void
     {
+        $path = "/users_images/" . $values->user_id . "/profile_image/" . $values->image->getName();
 
-        $path = "www/images/" . $values->user_id . "/profileImage/" . $values->image->file->getName();
+        $data = array(
+            'user_profile_img_path' => $path
+        );
 
-        $values->image->file->move($path);
+        $user = $this->database->table('users')->get($this->getUser()->getId());
+        $user->update($data);
 
-        $this->flashMessage($path);
+        $values->image->move("../www" . $path);
 
-//        $this->redirect('User:settings');
+        $this->flashMessage('Image was uploaded');
 
+        $this->redirect('User:settings');
     }
 
     /**

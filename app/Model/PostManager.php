@@ -36,6 +36,7 @@ class PostManager
                    p.wall_post_title,
                    p.wall_post_created_at,
                    p.hidden,
+                   u.user_profile_img_path AS post_user_profile_img_path,
                    u.firstname AS post_firstname,
                    u.lastname AS post_lastname,
                    u.user_id AS post_user_id
@@ -73,6 +74,7 @@ class PostManager
         return $this->database->query('
             SELECT c.comment_content,
                    c.comment_created_at,
+                   u.user_profile_img_path AS comment_user_profile_img_path,
                    u.firstname AS comment_firstname,
                    u.lastname AS comment_lastname
             FROM comments c
@@ -101,6 +103,7 @@ class PostManager
                    p.wall_post_title,
                    p.wall_post_created_at,
                    p.hidden,
+                   u.user_profile_img_path AS post_user_profile_img_path,
                    u.firstname AS post_firstname,
                    u.lastname AS post_lastname,
                    u.user_id AS post_user_id
@@ -139,6 +142,7 @@ class PostManager
                    p.wall_post_title,
                    p.wall_post_created_at,
                    p.hidden,
+                   u.user_profile_img_path AS post_user_profile_img_path,
                    u.firstname AS post_firstname,
                    u.lastname AS post_lastname,
                    u.user_id AS post_user_id
@@ -182,6 +186,7 @@ class PostManager
                    p.wall_post_title,
                    p.wall_post_created_at,
                    p.hidden,
+                   u.user_profile_img_path AS post_user_profile_img_path,
                    u.firstname AS post_firstname,
                    u.lastname AS post_lastname,
                    u.user_id AS post_user_id

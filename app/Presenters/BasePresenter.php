@@ -3,9 +3,33 @@
 namespace App\Presenters;
 
 use Nette\Application\UI\Presenter;
+use Nette\Database\Context;
 
 abstract class BasePresenter extends Presenter
 {
+    /**
+     * @var Context
+     */
+    private $database;
+
+    /**
+     * BasePresenter constructor.
+     * @param Context $database
+     */
+    public function __construct(Context $database)
+    {
+        parent::__construct();
+        $this->database = $database;
+    }
+
+    public function beforeRender()
+    {
+        if ($this->getUser()->isLoggedIn()) {
+            $this->template->userData = $this->getLoggedUserData();
+        }
+    }
+
+
     /**
      * @return \Nette\Http\UrlScript
      */
@@ -63,6 +87,14 @@ abstract class BasePresenter extends Presenter
             return true;
         }
         return false;
+    }
+
+    /**
+     * @return \Nette\Database\Table\ActiveRow|null
+     */
+    public function getLoggedUserData()
+    {
+        return $this->database->table('users')->get($this->getUser()->getId());
     }
 
 }

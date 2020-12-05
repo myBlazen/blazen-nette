@@ -16,26 +16,28 @@ use Nette\Security\Passwords;
 class SignPresenter extends BasePresenter
 {
     /**
-     * @throws \Nette\Application\AbortException
+     * @var Context
      */
-    protected function beforeRender()
+    private $database;
+
+    /**
+     * @var Passwords
+     */
+    private $passwords;
+
+    public function __construct(Context $database, Passwords $passwords)
     {
+        parent::__construct($database);
+        $this->database = $database;
+        $this->passwords = $passwords;
+    }
+
+    public function beforeRender()
+    {
+        parent::beforeRender();
         if ($this->getUser()->isLoggedIn()) {
             $this->redirect('Homepage:');
         }
-    }
-
-    private $database;
-    private $passwords;
-
-    public function __construct
-    (
-        Context $database,
-        Passwords $passwords
-    )
-    {
-        $this->database = $database;
-        $this->passwords = $passwords;
     }
 
 /**---------------------------------------------------SIGNIN----------------------------------------------------------->

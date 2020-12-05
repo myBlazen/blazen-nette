@@ -15,19 +15,8 @@ use Nette\Mail\SendException;
 use Nette\Mail\SendmailMailer;
 use Nette\Security\Passwords;
 
-final class ForgotPresenter extends BasePresenter
+class ForgotPresenter extends BasePresenter
 {
-
-    /**
-     * @throws \Nette\Application\AbortException
-     */
-    protected function beforeRender()
-    {
-        if ($this->getUser()->isLoggedIn()) {
-            $this->redirect('Homepage:');
-        }
-    }
-
     /**
      * @var Context
      */
@@ -42,14 +31,19 @@ final class ForgotPresenter extends BasePresenter
      * @param Context $database
      * @param Passwords $passwords
      */
-    public function __construct
-    (
-        Context $database,
-        Passwords $passwords
-    )
+    public function __construct(Context $database, Passwords $passwords)
     {
+        parent::__construct($database);
         $this->database = $database;
         $this->passwords = $passwords;
+    }
+
+    public function beforeRender()
+    {
+        parent::beforeRender();
+        if ($this->getUser()->isLoggedIn()) {
+            $this->redirect('Homepage:');
+        }
     }
 
     /**

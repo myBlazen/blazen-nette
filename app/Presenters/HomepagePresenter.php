@@ -8,21 +8,13 @@ use Nette;
 use App\Model\PostManager;
 use Nette\ComponentModel\IComponent;
 use Nette\Application\UI\Form;
+use Nette\Database\Context;
 
 final class HomepagePresenter extends BasePresenter
 {
-    /**
-     * @throws \Nette\Application\AbortException
-     */
-    protected function beforeRender()
-    {
-        if (!$this->getUser()->isLoggedIn()) {
-            $this->redirect('Sign:in');
-        }
-    }
 
     /**
-     * @var Nette\Database\Context
+     * @var Context
      */
     private $database;
 
@@ -33,12 +25,22 @@ final class HomepagePresenter extends BasePresenter
 
     /**
      * HomepagePresenter constructor.
-     * @param Nette\Database\Context $database
+     * @param Context $database
+     * @param PostManager $postManager
      */
-    public function __construct(Nette\Database\Context $database, PostManager $postManager)
+    public function __construct(Context $database, PostManager $postManager)
     {
+        parent::__construct($database);
         $this->database = $database;
         $this->postManager = $postManager;
+    }
+
+    public function beforeRender()
+    {
+        parent::beforeRender();
+        if (!$this->getUser()->isLoggedIn()) {
+            $this->redirect('Sign:in');
+        }
     }
 
 
