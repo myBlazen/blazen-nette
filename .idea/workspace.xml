@@ -20,19 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/www/users_images/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/PostManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/PostManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/ForgotPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/ForgotPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/post.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/post.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +134,9 @@
       <workItem from="1605783708010" duration="4177000" />
       <workItem from="1605796902746" duration="2933000" />
       <workItem from="1607150022265" duration="1351000" />
-      <workItem from="1607151431876" duration="32907000" />
+      <workItem from="1607151431876" duration="38095000" />
+      <workItem from="1607225928017" duration="320000" />
+      <workItem from="1607236975845" duration="2841000" />
     </task>
     <servers />
   </component>
@@ -205,10 +196,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605699543788" />
-    <state x="495" y="133" width="1165" height="737" key="find.popup" timestamp="1607173378404">
+    <state x="495" y="133" width="1165" height="737" key="find.popup" timestamp="1607189465735">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="495" y="133" width="1165" height="737" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607173378404" />
+    <state x="495" y="133" width="1165" height="737" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607189465735" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1607152513964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

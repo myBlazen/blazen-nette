@@ -27,7 +27,7 @@ class ForgotPresenter extends BasePresenter
     private $passwords;
 
     /**
-     * ResetPresenter constructor.
+     * ForgotPresenter constructor.
      * @param Context $database
      * @param Passwords $passwords
      */

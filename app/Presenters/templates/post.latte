@@ -3,8 +3,8 @@
     <!-- Card Header - Dropdown -->
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
         <div class="d-flex">
-            <img n:if="$userData->user_profile_img_path != null" class="img-profile rounded-circle mr-3" src="{$basePath . $wall_post->post_user_profile_img_path}" height="50px" width="50px" alt="profile img">
-            <img n:if="$userData->user_profile_img_path == null" class="img-profile rounded-circle mr-3" src="{$basePath}/images/profile-pic-placeholder.png" height="50px" width="50px" alt="profile img">
+            <img n:if="$wall_post->post_user_profile_img_path != null" class="img-profile rounded-circle mr-3" src="{$basePath . $wall_post->post_user_profile_img_path}" height="50px" width="50px" alt="profile img">
+            <img n:if="$wall_post->post_user_profile_img_path == null" class="img-profile rounded-circle mr-3" src="{$basePath}/images/profile-pic-placeholder.png" height="50px" width="50px" alt="profile img">
             <div>
                 <a href="#"><h7 class="m-0 font-weight-bold text-primary">{$wall_post->post_firstname} {$wall_post->post_lastname}</h7></a>
                 <small class="text-muted" n:if="$wall_post->hidden">Hidden</small>
@@ -25,6 +25,7 @@
             </div>
         </div>
     </div>
+
     <!-- Card Body -->
     <div class="card-body">
         <h5 class="card-title"><a n:href = "Post:show $wall_post->wall_post_id">{$wall_post->wall_post_title} </a></h5>
