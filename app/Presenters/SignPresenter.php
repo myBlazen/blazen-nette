@@ -55,6 +55,8 @@ class SignPresenter extends BasePresenter
         $form->addPassword('password')
             ->setRequired('Password is required!');
 
+        $form->addCheckbox('rememberMe', 'Remember me');
+
         $form->addSubmit('signIn', 'Login');
 
         $form->onSuccess[] = [$this, 'signInFormSucceeded'];
@@ -70,7 +72,13 @@ class SignPresenter extends BasePresenter
     {
         try{
             $this->getUser()->login($values->username, $values->password);
-            $this->getUser()->setExpiration('15 minutes');
+
+            if($values->rememberMe){
+                $this->getUser()->setExpiration('14 days');
+            }
+            else{
+                $this->getUser()->setExpiration('15 minutes');
+            }
             $this->redirect('Homepage:');
         }catch (AuthenticationException $e){
             $form->addError('Incorrect username or password');

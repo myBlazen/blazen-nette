@@ -11259,9 +11259,76 @@ body.sidebar-toggled footer.sticky-footer {
 
 .loading > body > * {
     display:none;
-    transition: .5s;
+    transition: 1s;
 }
 .loading body {
     background:#fff url(../images/loading.gif) no-repeat 50% 50%;
-    transition: .5s;
 }
+
+#profile .nav-tabs .nav-link{
+    border-top-left-radius: 0!important;
+    border-top-right-radius: 0!important;
+}
+
+/*#profile .profile-header-holder{*/
+/*    position: relative;*/
+/*}*/
+
+/*#profile .profile-info-holder{*/
+/*    position: absolute;*/
+/*    background-color: rgba(0,0,0,.5);*/
+/*    height: 80px;*/
+/*    width: 100%;*/
+/*    bottom: 20px;*/
+/*}*/
+
+/*#profile .profile-info-holder p{*/
+/*    position: absolute;*/
+/*    top:50%;*/
+/*    transform: translate(0, -50%);*/
+/*    font-size: 1.25rem;*/
+/*    color: #f8f9fc;*/
+/*}*/
+
+
+/*#profile .profile-img{*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, 20%);*/
+
+/*    width: 220px;*/
+/*    height: 220px;*/
+
+/*    border: 5px solid #f8f9fc;*/
+
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

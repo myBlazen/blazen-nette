@@ -1,13 +1,64 @@
 {block content}
 
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-lg-6">
-            <h1 n:block=title class="mb-5">Your timeline</h1>
+<div id="profile">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
 
-            <!-- Wall Post -->
-            {include '../post.latte'}
+            {include './includes/profileHeader.latte'}
+
+            <div class="col-xl-10">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link py-4 text-gray-600 active" id="home-tab" data-toggle="tab"
+                           href="#timeline" role="tab" aria-controls="timeline" aria-selected="true">Timeline</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-4 text-gray-600" id="aboutMe-tab" data-toggle="tab"
+                           href="#aboutMe" role="tab" aria-controls="aboutMe" aria-selected="false">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-4 text-gray-600" id="contact-tab" data-toggle="tab"
+                           href="#contact" role="tab" aria-controls="contact" aria-selected="false">Friends</a>
+                    </li>
+                    <li class="nav-item">
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-4 text-gray-600" id="Photos-tab" data-toggle="tab"
+                           href="#Photos" role="tab" aria-controls="Photos" aria-selected="false">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-4 text-gray-600" id="Videos-tab" data-toggle="tab"
+                           href="#Videos" role="tab" aria-controls="Videos" aria-selected="false">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-4 text-gray-600" id="contact-tab" data-toggle="tab"
+                           href="#contact" role="tab" aria-controls="contact" aria-selected="false">...</a>
+                    </li>
+                </ul>
+
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="timeline" role="tabpanel" aria-labelledby="timeline-tab">
+                        {include './includes/timeline.latte'}
+                    </div>
+                    <div class="tab-pane fade" id="aboutMe" role="tabpanel" aria-labelledby="aboutMe-tab">
+                        {include './includes/aboutMe.latte'}
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        Friends
+                    </div>
+                    <div class="tab-pane fade" id="Photos" role="tabpanel" aria-labelledby="contact-tab">
+                        Photos
+                    </div>
+                    <div class="tab-pane fade" id="Videos" role="tabpanel" aria-labelledby="contact-tab">
+                        Videos
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
+
 

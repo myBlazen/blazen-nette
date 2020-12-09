@@ -98,14 +98,14 @@
 //-------------------------------------------SameScrollLevelOnRefresh-------------------------------------------------->
 
 
-$(window).scroll(function () {
-    sessionStorage.scrollTop = $(this).scrollTop();
-});
-$(document).ready(function () {
-    if (sessionStorage.scrollTop != "undefined") {
-        $(window).scrollTop(sessionStorage.scrollTop);
-    }
-});
+// $(window).scroll(function () {
+//     sessionStorage.scrollTop = $(this).scrollTop();
+// });
+// $(document).ready(function () {
+//     if (sessionStorage.scrollTop != "undefined") {
+//         $(window).scrollTop(sessionStorage.scrollTop);
+//     }
+// });
 
 //-------------------------------------------AutosizeCommentTextarea--------------------------------------------------->
 
@@ -114,8 +114,10 @@ autosize(document.getElementsByClassName("comment-textarea"));
 $('.comment-textarea').keypress(function(e){
 
     if(e.key === 'Enter' && !e.shiftKey) {
-        this.form.submit();
-        this.form.innerText = "";
+        if(e.valueAsString){
+            this.form.submit();
+            this.form.innerText = "";
+        }
     }
 });
 
@@ -123,10 +125,16 @@ $('.comment-textarea').keypress(function(e){
 
 
 //-----------------------------------------------------LOADING--------------------------------------------------------->
+var delayInMilliseconds = 0;
+
+
 if (document.documentElement) {
     document.documentElement.className = 'loading';
 }
 
-$(document).ready(function() {
-    $(document.documentElement).removeClass('loading');
-});
+
+setTimeout(function (){
+    $(document).ready(function() {
+        $(document.documentElement).removeClass('loading');
+    });
+}, delayInMilliseconds)
