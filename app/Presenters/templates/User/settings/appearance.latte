@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-xl-4">
+        <img n:if="$userData->user_profile_img_path != null"
+                class="img-profile img-fluid"
+                id="profileImgPreview"
+                src="{$basePath . $userData->user_profile_img_path}">
+
+        <img n:if="$userData->user_profile_img_path == null"
+                class="img-profile img-fluid"
+                id="profileImgPreview"
+                src="{$basePath}/images/profile-pic-placeholder.png">
+
+        <img id="profileImgPreviewOutput" class="img-fluid">
+    </div>
+    <div class="col-xl-8">
+        <form n:name="uploadImageForm">
+            <div class="form-group">
+                <label n:name="image">
+                    <input n:name="image" class="form-control-file" onchange="loadProfileImgPreview(event)">
+                </label>
+                <input n:name="uploadImage" class="btn btn-primary">
+
+            </div>
+        </form>
+    </div>
+</div>

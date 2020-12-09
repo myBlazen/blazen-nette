@@ -6,6 +6,7 @@ use Nette;
 use App\Model\PostManager;
 use Nette\ComponentModel\IComponent;
 use Nette\Application\UI\Form;
+use Nette\Security\Passwords;
 use Nette\Utils\Image;
 
 class UserPresenter extends BasePresenter
@@ -21,14 +22,20 @@ class UserPresenter extends BasePresenter
     private $postManager;
 
     /**
+     * @var Passwords
+     */
+    private $passwords;
+
+    /**
      * HomepagePresenter constructor.
      * @param Nette\Database\Context $database
      */
-    public function __construct(Nette\Database\Context $database, PostManager $postManager)
+    public function __construct(Nette\Database\Context $database, PostManager $postManager, Passwords $passwords)
     {
         parent::__construct($database);
         $this->database = $database;
         $this->postManager = $postManager;
+        $this->passwords = $passwords;
     }
 
 
@@ -136,7 +143,149 @@ class UserPresenter extends BasePresenter
 
     }
 
+    public function actionSettings()
+    {
+        $data = $this->getLoggedUserData();
+        $this['generalSettingsForm']->setDefaults($data);
+        $this['informationSettingsForm']->setDefaults($data);
 
+    }
+
+    /**
+     * @return Form
+     */
+    public function createComponentGeneralSettingsForm():Form
+    {
+        $form = new Form;
+
+        $form->addText('firstname', 'First Name')
+            ->setRequired();
+
+        $form->addText('lastname', 'Last Name')
+            ->setRequired();
+
+        $form->addText('username', 'Username')
+            ->setRequired();
+
+        $form->addPassword('password','Password')
+            ->setRequired();
+
+        $form->addSubmit('saveChanges', 'Save Changes');
+
+        $form->onSuccess[] = [$this, 'GeneralSettingsFormSucceeded'];
+
+        return $form;
+    }
+
+    /**
+     * @param Form $form
+     * @param array $values
+     * @throws Nette\Application\AbortException
+     */
+    public function GeneralSettingsFormSucceeded(Form $form, array $values):void
+    {
+
+        $user = $this->database->table('users')->get($this->getUser()->getId());
+
+        if($user){
+            if($this->passwords->verify($values['password'], $user['password'])){
+                unset($values['password']);
+                if($values['birthday'] ===''){
+                    unset($values['birthday']);
+                }
+                $user->update($values);
+
+                $this->flashMessage('Changes saved', 'alert-success');
+
+                $this->redirect('User:settings');
+            }
+            else{
+                $this->flashMessage('Your password is incorect','alert-danger');
+
+                $this->redirect('User:settings');
+            }
+        }
+        else{
+            $this->flashMessage('Uups something went wrong');
+
+            $this->redirect('User:settings');
+        }
+
+    }
+
+    /**
+     * @return Form
+     */
+    public function createComponentInformationSettingsForm():Form
+    {
+        $form = new Form;
+
+        $form->addTextArea('about', 'About Me');
+
+        $form->addText('birthday', 'Birthday')
+            ->setHtmlType('date');
+
+        $form->addText('birthplace', 'Birthplace');
+
+        $form->addText('lives_in', 'Lives In');
+
+        $form->addText('occupation', 'Occupation');
+
+        $form->addSelect('sex', 'Sex')
+            ->setItems(array(
+                '' => 'select...',
+                'Male' => 'Male',
+                'Female' => 'Female'
+            ));
+
+        $form->addSelect('status', 'Status')
+            ->setItems(array(
+                '' => 'select...',
+                'Single' => 'Single',
+                'In Relationship' => 'In Relationship'
+                ));
+
+        $form->addPassword('password','Password')
+            ->setRequired();
+
+
+        $form->addSubmit('saveChanges', 'Save Changes');
+
+        $form->onSuccess[] = [$this, 'InformationSettingsFormSucceeded'];
+
+        return $form;
+    }
+
+    /**
+     * @param Form $form
+     * @param array $values
+     * @throws Nette\Application\AbortException
+     */
+    public function InformationSettingsFormSucceeded(Form $form, array $values): void
+    {
+        $user = $this->database->table('users')->get($this->getUser()->getId());
+
+        if($user){
+            if($this->passwords->verify($values['password'], $user['password'])){
+                unset($values['password']);
+                $user->update($values);
+
+                $this->flashMessage('Changes saved','alert-success');
+
+                $this->redirect('User:settings');
+            }
+            else{
+                $this->flashMessage('Your password is incorect','alert-danger');
+
+                $this->redirect('User:settings');
+            }
+        }
+        else{
+            $this->flashMessage('Uups something went wrong','alert-danger');
+
+            $this->redirect('User:settings');
+        }
+    }
 
 
 

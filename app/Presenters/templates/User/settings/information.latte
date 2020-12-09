@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col">
+        <form n:name="informationSettingsForm">
+            <div class="row">
+                <div class="col">
+                    <label n:name="about">About me:</label>
+                    <textarea n:name="about" class="form-control w-100" placeholder="About me" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label n:name="birthday">birthday:</label>
+                    <input n:name="birthday" class="form-control">
+                </div>
+                <div class="col">
+                    <label n:name="birthplace">birthplace:</label>
+                    <input n:name="birthplace" class="form-control" placeholder="Birthplace">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label n:name="lives_in">Lives in:</label>
+                    <input n:name="lives_in" class="form-control" placeholder="Lives In">
+                </div>
+                <div class="col">
+                    <label n:name="occupation">Occupation:</label>
+                    <input n:name="occupation" class="form-control" placeholder="Occupation">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="exampleFormControlSelect1">Sex:</label>
+                    <select n:name="sex" class="form-control">
+
+                    </select>
+                </div>
+                <div class="col">
+                    <label n:name="status">Status:</label>
+                    <select n:name="status" class="form-control">
+
+                    </select>
+                </div>
+            </div>
+
+
+
+            <div class="row mt-5">
+                <div class="col">
+                    <button class="form-control btn-primary" type="button" data-toggle="modal" data-target="#passwordInformation">Save Changes</button>
+                </div>
+            </div>
+
+
+
+            <div class="modal fade" id="passwordInformation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">To save changes enter your password</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <label n:name="password"></label>
+                            <input n:name="password" class="form-control" placeholder="Password">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input n:name="saveChanges" class="btn btn-primary" type="submit">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </form>
+    </div>
+</div>

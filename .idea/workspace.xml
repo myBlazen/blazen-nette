@@ -20,19 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/includes/aboutMe.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/includes/profileHeader.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/includes/timeline.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/images/header-wallpaper.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings/appearance.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings/general.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings/information.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Sign/in.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/includes/aboutMe.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/aboutMe.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/includes/profileHeader.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/profileHeader.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/includes/timeline.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/timeline.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/post.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/post.latte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +152,10 @@
       <workItem from="1607315444116" duration="590000" />
       <workItem from="1607320989345" duration="1631000" />
       <workItem from="1607455482579" duration="6296000" />
-      <workItem from="1607497199754" duration="10915000" />
+      <workItem from="1607497199754" duration="11079000" />
+      <workItem from="1607511480823" duration="17310000" />
+      <workItem from="1607529090855" duration="2692000" />
+      <workItem from="1607531832756" duration="2000" />
     </task>
     <servers />
   </component>
@@ -190,10 +195,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605703409978" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607181463441">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607518560570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607181463441" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607518560570" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607322898672">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -218,9 +223,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607503214485" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607155085949">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607522791981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607155085949" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607522791981" />
   </component>
 </project>

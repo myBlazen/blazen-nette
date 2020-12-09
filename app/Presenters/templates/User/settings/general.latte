@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col">
+
+        <form n:name="generalSettingsForm">
+            <div class="row mb-3">
+                <div class="col">
+                    <label n:name="firstname">*First Name:</label>
+                    <input n:name="firstname" class="form-control" placeholder="First name">
+                </div>
+                <div class="col">
+                    <label n:name="lastname">*Last Name:</label>
+                    <input n:name="lastname" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label n:name="username">*Username:</label>
+                    <input n:name="username" class="form-control" placeholder="Username">
+                    <small class="text-muted">
+                        This should contain your real name... it'll be shown in URL (blazen.maweb.eu/profile/your.username)
+                    </small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="form-control btn-primary" type="button" data-toggle="modal" data-target="#passwordGeneral">Save Changes</button>
+                </div>
+            </div>
+
+
+
+            <div class="modal fade" id="passwordGeneral" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">To save changes enter your password</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <label n:name="password"></label>
+                            <input n:name="password" class="form-control" placeholder="Password">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input n:name="saveChanges" class="btn btn-primary" type="submit">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </form>
+
+    </div>
+</div>
+
+

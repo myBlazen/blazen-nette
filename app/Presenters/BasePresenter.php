@@ -90,7 +90,7 @@ abstract class BasePresenter extends Presenter
     }
 
     /**
-     * @return \Nette\Database\Table\ActiveRow|null
+     * @return \Nette\Database\Table\ActiveRow|null|array
      */
     public function getLoggedUserData()
     {

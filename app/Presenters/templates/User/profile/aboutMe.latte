@@ -7,7 +7,7 @@
                     <h4 class="text-dark">Personal info</h4>
                 </div>
                 <div class="card-body">
-                    <div class="row">
+                    <div n:if="$userData->about != null || $userData->about != ''" class="row">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 About me:
@@ -15,14 +15,13 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make
+                            {$userData->about}
                             </p>
                         </div>
                     </div>
-                    <hr class="my-2">
-                    <div class="row">
+
+                    <div n:if="$userData->birthday != null || $userData->birthday != ''" class="row">
+                        <hr class="my-2">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 Birthday:
@@ -30,12 +29,13 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                December 8. 1999
+                                {$userData->birthday|date:'F j, Y'}
                             </p>
                         </div>
                     </div>
-                    <hr class="my-2">
-                    <div class="row">
+
+                    <div n:if="$userData->birthplace != null || $userData->birthplace != ''" class="row">
+                        <hr class="my-2">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 Birthplace:
@@ -43,12 +43,13 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                Třebíč
+                                {$userData->birthplace}
                             </p>
                         </div>
                     </div>
-                    <hr class="my-2">
-                    <div class="row">
+
+                    <div n:if="$userData->lives_in != null || $userData->lives_in != ''" class="row">
+                        <hr class="my-2">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 Lives in:
@@ -56,12 +57,13 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                Praha
+                                {$userData->lives_in}
                             </p>
                         </div>
                     </div>
-                    <hr class="my-2">
-                    <div class="row">
+
+                    <div n:if="$userData->occupation != null || $userData->occupation != ''" class="row">
+                        <hr class="my-2">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 Occupation:
@@ -69,12 +71,13 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                Website developer
+                                {$userData->occupation}
                             </p>
                         </div>
                     </div>
-                    <hr class="my-2">
-                    <div class="row">
+
+                    <div n:if="$userData->create_timestamp != null || $userData->create_timestamp != ''" class="row">
+                        <hr class="my-2">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 Joined:
@@ -82,12 +85,13 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                December 9. 2020
+                                {$userData->create_timestamp|date:'F j, Y'}
                             </p>
                         </div>
                     </div>
-                    <hr class="my-2">
-                    <div class="row">
+
+                    <div n:if="$userData->sex != null || $userData->sex != ''" class="row">
+                        <hr class="my-2">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 Sex:
@@ -95,12 +99,13 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                Male
+                                {$userData->sex}
                             </p>
                         </div>
                     </div>
-                    <hr class="my-2">
-                    <div class="row">
+
+                    <div n:if="$userData->status != null || $userData->status != ''" class="row">
+                        <hr class="my-2">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 Status:
@@ -108,7 +113,7 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                Single
+                                {$userData->status}
                             </p>
                         </div>
                     </div>
@@ -123,7 +128,7 @@
                 </div>
                 <div class="card-body">
 
-                    <div class="row">
+                    <div n:if="$userData->email != null || $userData->email != ''" class="row">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 Email:
@@ -131,12 +136,13 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                <a href="mailto:emanuln@seznam.cz">emanuln@seznam.cz</a>
+                                <a href="mailto:{$userData->email}">{$userData->email}</a>
                             </p>
                         </div>
                     </div>
-                    <hr class="my-2">
-                    <div class="row">
+
+                    <div n:if="$userData->phone != null || $userData->phone != ''" class="row">
+                        <hr class="my-2">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 Phone:
@@ -144,12 +150,13 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                <a href="tel:+420797709355">+420 797 709 355</a>
+                                <a href="tel:{$userData->phone}">{$userData->phone}</a>
                             </p>
                         </div>
                     </div>
-                    <hr class="my-2">
-                    <div class="row">
+
+                    <div n:if="$userData->website != null || $userData->website != ''" class="row">
+                        <hr class="my-2">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 Website:
@@ -157,7 +164,7 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                <a href="http://blazen.maweb.eu" target="_blank">blazen.maweb.eu</a>
+                                <a href="{$userData->website}" target="_blank">{$userData->website}</a>
                             </p>
                         </div>
                     </div>
@@ -184,8 +191,9 @@
                             </p>
                         </div>
                     </div>
-                    <hr class="my-2">
+
                     <div class="row">
+                        <hr class="my-2">
                         <div class="col-xl-4">
                             <p class="text-dark font-weight-bold">
                                 <i class="fab fa-instagram fa-lg mr-2"></i>
@@ -194,14 +202,13 @@
                         </div>
                         <div class="col">
                             <p class="text-muted">
-                                <a href="https://www.instagram.com/marbax_">marbax_</a>
+                                <a href="https://www.instagram.com/marbax_" target="_blank">marbax_</a>
                             </p>
                         </div>
                     </div>
 
                 </div>
             </div>
-
 
         </div>
     </div>

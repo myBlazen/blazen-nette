@@ -4,8 +4,9 @@
     <div class="row justify-content-center">
         <div class="col-lg-2">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-home" aria-selected="true">Design</a>
-                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-home" aria-selected="true">Appearance</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-profile" aria-selected="false">General</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-profile" aria-selected="false">Information</a>
                 <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-messages" aria-selected="false">Security</a>
                 <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-settings" aria-selected="false">Other</a>
             </div>
@@ -13,34 +14,14 @@
         <div class="col-lg-6">
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <div class="row">
-                        <div class="col-xl-4">
-                            <img n:if="$userData->user_profile_img_path != null"
-                                    class="img-profile img-fluid"
-                                    id="profileImgPreview"
-                                    src="{$basePath . $userData->user_profile_img_path}">
-
-                            <img n:if="$userData->user_profile_img_path == null"
-                                    class="img-profile img-fluid"
-                                    id="profileImgPreview"
-                                    src="{$basePath}/images/profile-pic-placeholder.png">
-
-                            <img id="profileImgPreviewOutput" class="img-fluid">
-                        </div>
-                        <div class="col-xl-8">
-                            <form n:name="uploadImageForm">
-                                <div class="form-group">
-                                    <label n:name="image">
-                                        <input n:name="image" class="form-control-file" onchange="loadProfileImgPreview(event)">
-                                    </label>
-                                    <input n:name="uploadImage" class="btn btn-primary">
-
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                    {include './settings/appearance.latte'}
                 </div>
-                <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+                <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    {include './settings/general.latte'}
+                </div>
+                <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    {include './settings/information.latte'}
+                </div>
                 <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
                 <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
             </div>

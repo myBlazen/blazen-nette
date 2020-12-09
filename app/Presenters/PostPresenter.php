@@ -127,8 +127,6 @@ class PostPresenter extends BasePresenter
     {
         $post = $this->postManager->getPublicPostById($wall_post_id, false);
 
-        bdump($post);
-
         if(!$post){
             $this->error('Post not found');
         }

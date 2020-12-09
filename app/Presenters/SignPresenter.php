@@ -81,6 +81,7 @@ class SignPresenter extends BasePresenter
             }
             $this->redirect('Homepage:');
         }catch (AuthenticationException $e){
+            $this->flashMessage('Incorrect username or password');
             $form->addError('Incorrect username or password');
         }
     }
@@ -222,7 +223,8 @@ class SignPresenter extends BasePresenter
             ->setRequired('Username is required!');
 
         $passwordInput = $form->addPassword('password', 'Password')
-            ->setRequired('Please enter password');
+            ->setRequired('Please enter password')
+            ->addRule($form::MIN_LENGTH, 'Password must be at least %d characters long', 8);
 
         $form->addPassword('repeat_password', 'Password (verify)')
             ->setRequired('Please enter password for verification')
