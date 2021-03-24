@@ -138,3 +138,9 @@ setTimeout(function (){
         $(document.documentElement).removeClass('loading');
     });
 }, delayInMilliseconds)
+
+//--------------------------------------------CAROUSELS---------------------------------------------------------------->
+
+$('#friendsCarousel').carousel({
+    interval: 0
+})

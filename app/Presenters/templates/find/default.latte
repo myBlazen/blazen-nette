@@ -1,0 +1,122 @@
+{block content}
+<div class="container">
+    <h1>Find Friends</h1>
+
+    <div id="friendsCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img rounded-circle mt-2 w-50 align-self-center"
+                                 src="{$basePath . $randomUsers[1]->user_profile_img_path}"
+                                 alt="Card image cap"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">{$randomUsers[1]->firstname . ' ' . $randomUsers[1]->lastname}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{$randomUsers[1]->username}</h6>
+                                <p class="card-text">{$randomUsers[1]->about}</p>
+                                <a href="" class="btn btn-primary">Show Profile</a>
+                                <a href="" class="btn btn-outline-primary float-right">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img rounded-circle mt-2 w-50 align-self-center"
+                                 src="{$basePath . $randomUsers[2]->user_profile_img_path}"
+                                 alt="Card image cap"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">{$randomUsers[2]->firstname . ' ' . $randomUsers[2]->lastname}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{$randomUsers[2]->username}</h6>
+                                <p class="card-text">{$randomUsers[2]->about}</p>
+                                <a href="" class="btn btn-primary">Show Profile</a>
+                                <a href="" class="btn btn-outline-primary float-right">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img rounded-circle mt-2 w-50 align-self-center"
+                                 src="{$basePath . $randomUsers[0]->user_profile_img_path}"
+                                 alt="Card image cap"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">{$randomUsers[0]->firstname . ' ' . $randomUsers[0]->lastname}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{$randomUsers[0]->username}</h6>
+                                <p class="card-text">{$randomUsers[0]->about}</p>
+                                <a href="" class="btn btn-primary">Show Profile</a>
+                                <a href="" class="btn btn-outline-primary float-right">+</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img rounded-circle mt-2 w-50 align-self-center"
+                                 src="{$basePath . $randomUsers[1]->user_profile_img_path}"
+                                 alt="Card image cap"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">{$randomUsers[1]->firstname . ' ' . $randomUsers[1]->lastname}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{$randomUsers[1]->username}</h6>
+                                <p class="card-text">{$randomUsers[1]->about}</p>
+                                <a href="" class="btn btn-primary">Show Profile</a>
+                                <a href="" class="btn btn-outline-primary float-right">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img rounded-circle mt-2 w-50 align-self-center"
+                                 src="{$basePath . $randomUsers[3]->user_profile_img_path}"
+                                 alt="Card image cap"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">{$randomUsers[3]->firstname . ' ' . $randomUsers[3]->lastname}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{$randomUsers[3]->username}</h6>
+                                <p class="card-text">{$randomUsers[3]->about}</p>
+                                <a href="" class="btn btn-primary">Show Profile</a>
+                                <a href="" class="btn btn-outline-primary float-right">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img class="card-img rounded-circle mt-2 w-50 align-self-center"
+                                 src="{$basePath . $randomUsers[4]->user_profile_img_path}"
+                                 alt="Card image cap"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">{$randomUsers[4]->firstname . ' ' . $randomUsers[4]->lastname}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{$randomUsers[4]->username}</h6>
+                                <p class="card-text">{$randomUsers[4]->about}</p>
+                                <a href="" class="btn btn-primary">Show Profile</a>
+                                <a href="" class="btn btn-outline-primary float-right">+</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="btn btn-primary mt-5 mr-3" href="#friendsCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="btn btn-primary mt-5" href="#friendsCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+        <a href="" class="btn btn-outline-primary mt-5 float-right">Find More</a>
+
+    </div>
+
+
+</div>
+

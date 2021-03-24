@@ -26,10 +26,17 @@ abstract class BasePresenter extends Presenter
     {
         if ($this->getUser()->isLoggedIn()) {
             $this->template->userData = $this->getLoggedUserData();
+            $this->template->isAdmin = $this->isAdmin();
         }
     }
 
-
+    /**
+     *
+     */
+    public function isAdmin()
+    {
+        return $this->getUser()->roles[0] == "admin" && $this->getUser()->isLoggedIn() && $this->getUser()->roles;
+    }
     /**
      * @return \Nette\Http\UrlScript
      */
@@ -95,6 +102,19 @@ abstract class BasePresenter extends Presenter
     public function getLoggedUserData()
     {
         return $this->database->table('users')->get($this->getUser()->getId());
+    }
+
+    /**
+     * @param int $limit
+     * @return \Nette\Database\Table\Selection
+     */
+    public function getRandomUsers(int $limit = 10): array
+    {
+            $users = $this->database->table('users')->select('
+            lastname, firstname, username, user_profile_img_path, about
+            ')->limit($limit)->fetchAll();
+
+            return $users;
     }
 
 }

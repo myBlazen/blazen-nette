@@ -1,0 +1,30 @@
+{block content}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <img src="{$basePath . $game->game_img_path}" alt="Game Image" class="img-fluid">
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col d-inline-block">
+                    <h1 class="d-inline">
+                        {$game->game_name}
+                    </h1>
+                    <small class="text-muted">
+                        Alpha
+                    </small>
+                    <a href="{$basePath . $game->game_file_path}" download class="btn btn-outline-primary float-right">Download windows version <i class="fas fa-download"></i></a>
+                    <a n:if="$isAdmin" n:href="Games:edit $game->game_id" class="btn btn-outline-primary float-right"><i class="fas fa-edit"></i></a>
+                </div>
+            </div>
+            <hr>
+            <div class="row" style="min-height: 580px">
+                <div class="col">
+                    <div class="h4">
+                        {$game->game_description}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+{block content}
+<div class="container">
+    <div class="row">
+        <div class="col h1">
+            Edit: {$game->game_name}
+        </div>
+    </div>
+    <form n:name="editGameForm">
+        <div class="row">
+            <div class="col-xl-4">
+
+                <img class="img-profile img-fluid"
+                     id="profileImgPreview"
+                     src="{$basePath . $game->game_img_path}">
+
+                <img id="gameImgPreviewOutput" class="img-fluid">
+            </div>
+            <div class="col-xl-8">
+                <div class="form-group">
+                    <div class="row pt-xl-0 pt-3">
+                        <div class="col">
+                            <img class="img-profile img-fluid"
+                                 id="profileImgPreview"
+                                 src="{$basePath . $game->game_icon_path}">
+
+                            <img id="gameiconPreviewOutput" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <label n:name="game_icon">Game Icon: </label>
+                            <input n:name="game_icon" class="form-control-file" onchange="loadGameIconPreview(event)">
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col">
+                            <label n:name="game_image">Game Image: </label>
+                            <input n:name="game_image" class="form-control-file" onchange="loadGameImgPreview(event)">
+                        </div>
+                        <div class="col">
+                            <label n:name="game_file">Game file .exe</label>
+                            <input n:name="game_file" class="form-control-file">
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col">
+                            <label n:name="game_description">Game description:</label>
+                            <textarea n:name="game_description" class="form-control w-100" placeholder="Game description" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row pt-3">
+                        <div class="col">
+                            <input n:name="editGame" class="btn btn-primary">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </form>
+</div>
+<script>
+    //------------------------------------------GAME-IMG-PREVIEW-------------------------------------------------------->
+
+    var loadGameImgPreview = function(event) {
+        var previous = document.getElementById('gameImgPreview');
+        previous.style = 'display: none';
+        var output = document.getElementById('gameImgPreviewOutput');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+    var loadGameIconPreview = function(event) {
+        var previous = document.getElementById('gameIconPreview');
+        previous.style = 'display: none';
+        var output = document.getElementById('gameIconPreviewOutput');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+</script>

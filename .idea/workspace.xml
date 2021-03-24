@@ -20,21 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings/appearance.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings/general.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings/information.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/GameManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/FindPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/GamesPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Games/create.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Games/default.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Games/detail.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Games/edit.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings/connections.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/find/default.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/find/friends.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blazen.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/images/placeholder500x1000px.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/SignPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/ForgotPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/ForgotPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/includes/aboutMe.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/aboutMe.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/includes/profileHeader.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/profileHeader.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/includes/timeline.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/timeline.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile/aboutMe.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/aboutMe.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/settings.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/post.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/post.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/footer.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/footer.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/sidebar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/sidebar.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,22 +99,23 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/www/images" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\www\blazen\www\users_images" />
-      <recent name="C:\www\blazen\app\Presenters\templates\Email" />
-      <recent name="C:\www\blazen\app\Presenters\templates" />
+      <recent name="C:\www\blazen\www\blazen_games" />
       <recent name="C:\www\blazen\www\images" />
+      <recent name="C:\www\blazen\www\games" />
+      <recent name="C:\www\blazen\www\users_images\29\profile_image" />
+      <recent name="C:\www\blazen\www\users_images\28\profile_image" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\www\blazen\www\images" />
+      <recent name="C:\www\blazen\www\js" />
+      <recent name="C:\www\blazen\www\css" />
+      <recent name="C:\www\blazen\www\slick" />
       <recent name="C:\www\blazen\app\Presenters\templates\Email" />
-      <recent name="C:\www\blazen\app" />
-      <recent name="C:\www\blazen\bin" />
-      <recent name="C:\www\blazen\log" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -155,7 +165,26 @@
       <workItem from="1607497199754" duration="11079000" />
       <workItem from="1607511480823" duration="17310000" />
       <workItem from="1607529090855" duration="2692000" />
-      <workItem from="1607531832756" duration="2000" />
+      <workItem from="1607531832756" duration="150000" />
+      <workItem from="1607870331704" duration="89000" />
+      <workItem from="1609141286177" duration="14000" />
+      <workItem from="1609222602706" duration="87000" />
+      <workItem from="1609223769588" duration="159000" />
+      <workItem from="1609223936161" duration="4369000" />
+      <workItem from="1609237501806" duration="17960000" />
+      <workItem from="1609300873138" duration="4409000" />
+      <workItem from="1609781146759" duration="3244000" />
+      <workItem from="1610123830110" duration="687000" />
+      <workItem from="1610124867240" duration="8912000" />
+      <workItem from="1610984073657" duration="142000" />
+      <workItem from="1614899710551" duration="1424000" />
+      <workItem from="1614903808869" duration="1478000" />
+      <workItem from="1614908105920" duration="2376000" />
+      <workItem from="1614961076631" duration="5529000" />
+      <workItem from="1616537849217" duration="6410000" />
+      <workItem from="1616590163736" duration="94000" />
+      <workItem from="1616590293202" duration="16000" />
+      <workItem from="1616590315704" duration="17998000" />
     </task>
     <servers />
   </component>
@@ -175,57 +204,46 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="770" y="399" key="#Composer" timestamp="1603071401421">
+    <state x="552" y="161" key="#Plugins" timestamp="1616590202401">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="770" y="399" key="#Composer/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603071401421" />
-    <state x="780" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605517422892">
+    <state x="552" y="161" key="#Plugins/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616590202401" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616590243905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="780" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605517422892" />
-    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605630340654">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616590243905" />
+    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609242375332">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605630340654" />
-    <state x="808" y="306" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605516776660">
+    <state x="731" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609242375332" />
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1616537880660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="808" y="306" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605516776660" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605703409978">
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616537880660" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616592528665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605703409978" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607518560570">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616592528665" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609245859944" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1609256675110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607518560570" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607322898672">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609256675110" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1610984214150">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607322898672" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1605258352345">
+    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610984214150" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1614903491508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605258352345" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603072080994">
+    <state x="461" y="165" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1614903491508" />
+    <state x="495" y="133" width="1165" height="737" key="find.popup" timestamp="1614903963607">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603072080994" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605699543788">
+    <state x="495" y="133" width="1165" height="737" key="find.popup/-1920.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1614903963607" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1609256689713">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605699543788" />
-    <state x="495" y="133" width="1165" height="737" key="find.popup" timestamp="1607266764440">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="495" y="133" width="1165" height="737" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607266764440" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1607503214485">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607503214485" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607522791981">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607522791981" />
+    <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609256689713" />
   </component>
 </project>

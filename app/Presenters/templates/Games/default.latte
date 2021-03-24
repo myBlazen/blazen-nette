@@ -1,0 +1,27 @@
+{block content}
+<div class="container">
+    <div class="row">
+        <div class="container">
+            <h1 class="float-left">Hry</h1>
+            <a n:if="$isAdmin" n:href="Games:create" class="btn btn-outline-primary float-right">+</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div n:foreach="$games as $game">
+            <div class="col">
+                <div class="card" style="max-width: 252px" id="{$game->game_id}">
+                    <img class="card-img mt-2 w-50 align-self-center"
+                         src="{$basePath . $game->game_icon_path}"
+                         alt="Card image cap"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">{$game->game_name}</h4>
+                        <a n:href="Games:detail $game->game_id" class="btn btn-primary">Game Details</a>
+                        <a href="{$basePath . $game->game_file_path}" download class="btn btn-outline-primary float-right">+</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

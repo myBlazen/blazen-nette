@@ -27,8 +27,10 @@ class UserPresenter extends BasePresenter
     private $passwords;
 
     /**
-     * HomepagePresenter constructor.
+     * UserPresenter constructor.
      * @param Nette\Database\Context $database
+     * @param PostManager $postManager
+     * @param Passwords $passwords
      */
     public function __construct(Nette\Database\Context $database, PostManager $postManager, Passwords $passwords)
     {
@@ -148,6 +150,7 @@ class UserPresenter extends BasePresenter
         $data = $this->getLoggedUserData();
         $this['generalSettingsForm']->setDefaults($data);
         $this['informationSettingsForm']->setDefaults($data);
+        $this['connectionsSettingsForm']->setDefaults($data);
 
     }
 
@@ -287,7 +290,55 @@ class UserPresenter extends BasePresenter
         }
     }
 
+    public function createComponentConnectionsSettingsForm():Form
+    {
+        $form = new Form;
 
+        $form->addText('facebook_name', 'Facebook');
+
+        $form->addText('instagram_name', 'Instagram');
+
+        $form->addPassword('password','Password')
+            ->setRequired();
+
+        $form->addSubmit('saveChanges', 'Save Changes');
+
+        $form->onSuccess[] = [$this, 'ConnectionsSettingsFormSucceeded'];
+
+        return $form;
+    }
+
+
+    /**
+     * @param Form $form
+     * @param array $values
+     * @throws Nette\Application\AbortException
+     */
+    public function ConnectionsSettingsFormSucceeded(Form $form, array $values): void
+    {
+        $user = $this->database->table('users')->get($this->getUser()->getId());
+
+        if($user){
+            if($this->passwords->verify($values['password'], $user['password'])){
+                unset($values['password']);
+                $user->update($values);
+
+                $this->flashMessage('Changes saved','alert-success');
+
+                $this->redirect('User:settings');
+            }
+            else{
+                $this->flashMessage('Your password is incorect','alert-danger');
+
+                $this->redirect('User:settings');
+            }
+        }
+        else{
+            $this->flashMessage('Uups something went wrong','alert-danger');
+
+            $this->redirect('User:settings');
+        }
+    }
 
 
 }

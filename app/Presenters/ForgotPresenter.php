@@ -78,7 +78,7 @@ class ForgotPresenter extends BasePresenter
 
             return $query[0]['hash'];
         }catch (\Exception $e){
-            $this->flashMessage('Account with this email doesnt exist');
+            $this->flashMessage('Account with this email doesnt exist', 'alert-info');
         }
         return null;
     }
@@ -133,7 +133,7 @@ class ForgotPresenter extends BasePresenter
         try{
             $mailer->send($mail);
         }catch (SendException $e){
-            $this->flashMessage('Failed to send mail');
+            $this->flashMessage('Failed to send mail', 'alert-danger');
         }
 
     }
