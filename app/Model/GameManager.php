@@ -24,12 +24,14 @@ class GameManager
 
 //--------------------------------------------------------------------------------------------------------------------->
 
-    public function getGames(){
+    public function getGames()
+    {
         $games= $this->database->table('blazen_games')->fetchAll();
         return $games;
     }
 
-    public function getGameById($game_id){
+    public function getGameById($game_id)
+    {
         return $this->database->table('blazen_games')->get($game_id);
     }
 

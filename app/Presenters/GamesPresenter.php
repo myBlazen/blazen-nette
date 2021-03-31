@@ -5,30 +5,38 @@ declare(strict_types=1);
 namespace App\Presenters;
 
 use App\Model\GameManager;
+use App\Model\UserManager;
 use Nette;
 use Nette\Application\UI\Form;
+use Nette\Database\Context;
 
 final class GamesPresenter extends BasePresenter
 {
     /**
-     * @var Nette\Database\Context
+     * @var Context
      */
     private $database;
 
     /**
-     * @var
+     * @var GameManager
      */
     private $gameManager;
 
     /**
-     * FindPresenter constructor.
-     * @param Nette\Database\Context $database
+     * @var UserManager
      */
-    public function __construct(Nette\Database\Context $database, GameManager $gameManager)
+    private $userManager;
+
+    /**
+     * FindPresenter constructor.
+     * @param Context $database
+     */
+    public function __construct(Context $database, GameManager $gameManager, UserManager $userManager)
     {
-        parent::__construct($database);
+        parent::__construct($database, $userManager);
         $this->database = $database;
         $this->gameManager = $gameManager;
+        $this->userManager = $userManager;
     }
 
     /**
@@ -40,7 +48,7 @@ final class GamesPresenter extends BasePresenter
 
         if (!$this->user->isLoggedIn()) {
             if ($this->user->logoutReason === Nette\Http\UserStorage::INACTIVITY) {
-                $this->flashMessage('You have been signed out due to inactivity. Please sign in again.');
+                $this->flashMessage('You have been signed out due to inactivity. Please sign in again.', 'alert-info');
             }
             $this->redirect('Sign:in', ['backlink' => $this->storeRequest()]);
         }

@@ -1,11 +1,11 @@
-
+<div n:if="$wall_posts != null">
 <div n:foreach="$wall_posts as $wall_post" class="card shadow mb-4" id="{$wall_post->wall_post_id}">
     <!-- Card Header - Dropdown -->
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
         <div class="d-flex">
             <img  class="img-profile rounded-circle mr-3" src="{$basePath . $wall_post->post_user_profile_img_path}" height="50px" width="50px" alt="profile img">
             <div>
-                <a href="#"><h7 class="m-0 font-weight-bold text-primary">{$wall_post->post_firstname} {$wall_post->post_lastname}</h7></a>
+                <a n:href="User:profile $wall_post->post_username"><h7 class="m-0 font-weight-bold text-primary">{$wall_post->post_firstname} {$wall_post->post_lastname}</h7></a>
                 <small class="text-muted" n:if="$wall_post->hidden">Hidden</small>
                 <p class="card-link m-0"><small class="text-muted">{$wall_post->wall_post_created_at|date:'F j, Y'}</small></p>
             </div>
@@ -54,7 +54,7 @@
                 <div class=" d-flex">
                     <img class="img-profile rounded-circle mr-3" src="{$basePath . $comment->comment_user_profile_img_path}" height="50px" width="50px" alt="profile img">
                     <div class="comment">
-                        <a href="#"><h7 class="m-0 font-weight-bold text-primary">{$comment->comment_firstname} {$comment->comment_lastname}</h7></a>
+                        <a n:href="User:profile $comment->comment_username"><h7 class="m-0 font-weight-bold text-primary">{$comment->comment_firstname} {$comment->comment_lastname}</h7></a>
                         <p class="card-link mb-2">
                             {$comment->comment_content}
                         </p>
@@ -77,7 +77,7 @@
         <!-- comment -->
 
         <div class="d-flex">
-            <img class="img-profile rounded-circle mr-3" src="{$basePath . $userData->user_profile_img_path}" height="40px" width="40px" alt="profile img">
+            <img class="img-profile rounded-circle mr-3" src="{$basePath . $loggedUserData->user_profile_img_path}" height="40px" width="40px" alt="profile img">
 
             <form n:name="commentPostForm" class="w-100 user">
                 <input n:name="wall_post_id" value="{$wall_post->wall_post_id}">
@@ -91,4 +91,11 @@
 
     </div>
 </div>
+</div>
+<div n:if="$wall_posts == null">
 
+    <div class="col align-content-center">
+        <h2 class="">Tento uživatel zatím nic nezveřejnil</h2>
+    </div>
+
+</div>

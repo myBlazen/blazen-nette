@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="{$basePath}/css/main.css" type="text/css">
 
 	<!-- Slick CSS -->
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="{$basePath}/slick-1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="{$basePath}/slick-1.8.1/slick/slick-theme.css"/>
 
 	<!-- Fonts -->
 	<link href="{$basePath}/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -76,10 +77,10 @@
 		{include content}
 	</div>
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-	<i class="fas fa-angle-up"></i>
-</a>
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top">
+		<i class="fas fa-angle-up"></i>
+	</a>
 
 	{block scripts}
 		<script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
@@ -94,10 +95,11 @@
 		<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
 
 		<!-- Slick JS -->
-		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="{$basePath}/slick-1.8.1/slick/slick.min.js"></script>
 
 		<!-- Custom JS -->
-		<script src="{$basePath}/js/main.js"></script>
+		<script type="text/javascript" src="{$basePath}/js/main.js"></script>
 
 	{/block}
 </body>

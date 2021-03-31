@@ -12,8 +12,9 @@ use Nette\Mail\SendException;
 use Nette\Mail\SendmailMailer;
 use Nette\Security\AuthenticationException;
 use Nette\Security\Passwords;
+use App\Model\UserManager;
 
-class SignPresenter extends BasePresenter
+final class SignPresenter extends BasePresenter
 {
     /**
      * @var Context
@@ -25,11 +26,17 @@ class SignPresenter extends BasePresenter
      */
     private $passwords;
 
-    public function __construct(Context $database, Passwords $passwords)
+    /**
+     * @var UserManager
+     */
+    private $userManager;
+
+    public function __construct(Context $database, Passwords $passwords, UserManager $userManager)
     {
-        parent::__construct($database);
+        parent::__construct($database, $userManager);
         $this->database = $database;
         $this->passwords = $passwords;
+        $this->userManager = $userManager;
     }
 
     public function beforeRender()
@@ -81,8 +88,7 @@ class SignPresenter extends BasePresenter
             }
             $this->redirect('Homepage:');
         }catch (AuthenticationException $e){
-            $this->flashMessage('Incorrect username or password');
-            $form->addError('Incorrect username or password');
+            $this->flashMessage('Incorrect username or password', 'alert-danger');
         }
     }
 
@@ -94,7 +100,7 @@ class SignPresenter extends BasePresenter
     public function actionOut(): void
     {
         $this->getUser()->logout();
-        $this->flashMessage('logged out');
+        $this->flashMessage('logged out', 'alert-success');
         $this->redirect('Sign:in');
     }
 
@@ -177,10 +183,10 @@ class SignPresenter extends BasePresenter
                 'hash'  => $hash,
             ]);
         }catch (UniqueConstraintViolationException $e){
-            $this->flashMessage('This email is already reqistered');
+            $this->flashMessage('This email is already reqistered', 'alert-success');
             $sendMail = false;
         }catch (\Exception $e){
-            $this->flashMessage('db insert failed');
+            $this->flashMessage('db insert failed','alert-danger');
             $sendMail = false;
         }
 
@@ -201,9 +207,9 @@ class SignPresenter extends BasePresenter
         if($sendMail){
             try{
                 $mailer->send($mail);
-                $this->flashMessage('Email send.. it can take a while. U need to open this email to continue registration');
+                $this->flashMessage('Email send.. it can take a while. Continue registration via email', 'alert-info');
             }catch (SendException $e) {
-                $this->flashMessage('Failed to send mail');
+                $this->flashMessage('Failed to send mail', 'alert-danger');
             }
         }
     }
@@ -259,7 +265,7 @@ class SignPresenter extends BasePresenter
                 ->update($data);
 
         }catch (\Exception $e) {
-            $this->flashMessage('something went wrong');
+            $this->flashMessage('something went wrong', 'alert-danger');
             $sendMail = false;
         }
 
@@ -280,9 +286,9 @@ class SignPresenter extends BasePresenter
             try{
                 $mailer->send($mail);
             }catch (SendException $e){
-                $this->flashMessage('Failed to send mail');
+                $this->flashMessage('Failed to send mail', 'alert-danger');
             }
-            $this->flashMessage('You have successfully registered, now u can sign in');
+            $this->flashMessage('You have successfully registered, now you can sign in', 'alert-success');
             $this->redirect('Sign:in');
         }
 

@@ -2,8 +2,10 @@
 
 namespace App\Presenters;
 
+use App\Model\UserManager;
 use Nette\Application\UI\Presenter;
 use Nette\Database\Context;
+use Nette\Http\UrlScript;
 
 abstract class BasePresenter extends Presenter
 {
@@ -13,34 +15,42 @@ abstract class BasePresenter extends Presenter
     private $database;
 
     /**
+     * @var UserManager
+     */
+    private $userManager;
+
+    /**
      * BasePresenter constructor.
      * @param Context $database
+     * @param UserManager $userManager
      */
-    public function __construct(Context $database)
+    public function __construct(Context $database, UserManager $userManager)
     {
         parent::__construct();
+        $this->userManager = $userManager;
         $this->database = $database;
     }
 
     public function beforeRender()
     {
         if ($this->getUser()->isLoggedIn()) {
-            $this->template->userData = $this->getLoggedUserData();
+            $this->template->loggedUserData = $this->database->table('users')->get($this->getUser()->getId());
             $this->template->isAdmin = $this->isAdmin();
         }
     }
 
     /**
-     *
+     * @return bool
      */
-    public function isAdmin()
+    public function isAdmin():bool
     {
         return $this->getUser()->roles[0] == "admin" && $this->getUser()->isLoggedIn() && $this->getUser()->roles;
     }
+
     /**
-     * @return \Nette\Http\UrlScript
+     * @return UrlScript
      */
-    public function getUrl()
+    public function getUrl():UrlScript
     {
         return $this->getHttpRequest()->getUrl();
     }
@@ -90,31 +100,6 @@ abstract class BasePresenter extends Presenter
      */
     public function isPostOwner($post_user_id):bool
     {
-        if($post_user_id == $this->getUser()->getId()){
-            return true;
-        }
-        return false;
+        return $post_user_id == $this->getUser()->getId();
     }
-
-    /**
-     * @return \Nette\Database\Table\ActiveRow|null|array
-     */
-    public function getLoggedUserData()
-    {
-        return $this->database->table('users')->get($this->getUser()->getId());
-    }
-
-    /**
-     * @param int $limit
-     * @return \Nette\Database\Table\Selection
-     */
-    public function getRandomUsers(int $limit = 10): array
-    {
-            $users = $this->database->table('users')->select('
-            lastname, firstname, username, user_profile_img_path, about
-            ')->limit($limit)->fetchAll();
-
-            return $users;
-    }
-
 }

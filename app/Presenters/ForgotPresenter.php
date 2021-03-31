@@ -4,18 +4,17 @@ declare(strict_types=1);
 
 namespace App\Presenters;
 
-use Nette\Application\AbortException;
 use Nette\Database\Context;
 use Nette\Http\Url;
 use Latte\Engine;
 use Nette\Application\UI\Form;
-use Nette\ComponentModel\IComponent;
 use Nette\Mail\Message;
 use Nette\Mail\SendException;
 use Nette\Mail\SendmailMailer;
 use Nette\Security\Passwords;
+use App\Model\UserManager;
 
-class ForgotPresenter extends BasePresenter
+final class ForgotPresenter extends BasePresenter
 {
     /**
      * @var Context
@@ -27,15 +26,22 @@ class ForgotPresenter extends BasePresenter
     private $passwords;
 
     /**
+     * @var UserManager
+     */
+    private $userManager;
+
+    /**
      * ForgotPresenter constructor.
      * @param Context $database
      * @param Passwords $passwords
+     * @param UserManager $userManager
      */
-    public function __construct(Context $database, Passwords $passwords)
+    public function __construct(Context $database, Passwords $passwords, UserManager $userManager)
     {
-        parent::__construct($database);
+        parent::__construct($database, $userManager);
         $this->database = $database;
         $this->passwords = $passwords;
+        $this->userManager = $userManager;
     }
 
     public function beforeRender()

@@ -6,7 +6,7 @@ namespace App\Presenters;
 
 use Nette;
 use App\Model\PostManager;
-use Nette\ComponentModel\IComponent;
+use App\Model\UserManager;
 use Nette\Application\UI\Form;
 use Nette\Database\Context;
 
@@ -24,15 +24,22 @@ final class HomepagePresenter extends BasePresenter
     private $postManager;
 
     /**
+     * @var UserManager
+     */
+    private $userManager;
+
+    /**
      * HomepagePresenter constructor.
      * @param Context $database
      * @param PostManager $postManager
+     * @param UserManager $userManager
      */
-    public function __construct(Context $database, PostManager $postManager)
+    public function __construct(Context $database, PostManager $postManager, UserManager $userManager)
     {
-        parent::__construct($database);
+        parent::__construct($database, $userManager);
         $this->database = $database;
         $this->postManager = $postManager;
+        $this->userManager = $userManager;
     }
 
     public function beforeRender()
@@ -83,7 +90,7 @@ final class HomepagePresenter extends BasePresenter
 
         $values = null;
 
-        $this->flashMessage('Post was published');
+        $this->flashMessage('Post was published', 'alert-success');
 
         $this->redirect('Homepage:');
 
@@ -123,7 +130,7 @@ final class HomepagePresenter extends BasePresenter
 
         $values = null;
 
-        $this->flashMessage('Comment was published');
+        $this->flashMessage('Comment was published', 'alert-success');
 
         $this->redirect('Homepage:');
 

@@ -3,16 +3,17 @@
 namespace App\Presenters;
 
 use Nette;
+
+use App\Model\UserManager;
 use App\Model\PostManager;
-use Nette\ComponentModel\IComponent;
 use Nette\Application\UI\Form;
 use Nette\Security\Passwords;
-use Nette\Utils\Image;
+use Nette\Database\Context;
 
-class UserPresenter extends BasePresenter
+final class UserPresenter extends BasePresenter
 {
     /**
-     * @var Nette\Database\Context
+     * @var Context
      */
     private $database;
 
@@ -27,22 +28,33 @@ class UserPresenter extends BasePresenter
     private $passwords;
 
     /**
+     * @var UserManager
+     */
+    private $userManager;
+
+    /**
      * UserPresenter constructor.
-     * @param Nette\Database\Context $database
+     * @param Context $database
      * @param PostManager $postManager
      * @param Passwords $passwords
+     * @param UserManager $userManager
      */
-    public function __construct(Nette\Database\Context $database, PostManager $postManager, Passwords $passwords)
-    {
-        parent::__construct($database);
+    public function __construct(
+        Context $database,
+        PostManager $postManager,
+        Passwords $passwords,
+        UserManager $userManager
+    ){
+        parent::__construct($database, $userManager);
         $this->database = $database;
         $this->postManager = $postManager;
         $this->passwords = $passwords;
+        $this->userManager = $userManager;
     }
 
 
     /**
-     * @throws \Nette\Application\AbortException
+     * @throws Nette\Application\AbortException
      */
     protected function startup()
     {
@@ -50,16 +62,25 @@ class UserPresenter extends BasePresenter
 
         if (!$this->user->isLoggedIn()) {
             if ($this->user->logoutReason === Nette\Http\UserStorage::INACTIVITY) {
-                $this->flashMessage('You have been signed out due to inactivity. Please sign in again.');
+                $this->flashMessage('You have been signed out due to inactivity. Please sign in again.', 'alert-info');
             }
             $this->redirect('Sign:in', ['backlink' => $this->storeRequest()]);
         }
     }
 
 
-    public function RenderProfile(): void
+    public function RenderProfile(string $username = null): void
     {
-        $this->template->wall_posts = $this->postManager->getPostsByUser($this->getUser()->getId(),true);
+        if($username === null){
+            $this->template->wall_posts = $this->postManager->getPostsByUser($this->getUser()->getId(),true);
+            $this->template->userData = $this->userManager->getLoggedUserData($this->getUser()->getId());
+            bdump($this->userManager->getLoggedUserData($this->getUser()->getId()));
+        }
+        else{
+            $this->template->wall_posts = $this->postManager->getPublicPostsByUsername($username);
+            $this->template->userData = $this->userManager->getUserDataByUsername($username);
+            bdump($this->userManager->getUserDataByUsername($username));
+        }
     }
 
 
@@ -101,7 +122,7 @@ class UserPresenter extends BasePresenter
 
         $values->image->move("../www" . $path);
 
-        $this->flashMessage('Image was uploaded');
+        $this->flashMessage('Image was uploaded', 'alert-success');
 
         $this->redirect('User:settings');
     }
@@ -139,7 +160,7 @@ class UserPresenter extends BasePresenter
 
         $values = null;
 
-        $this->flashMessage('Comment was published');
+        $this->flashMessage('Comment was published', 'alert-success');
 
         $this->redirect('User:profile');
 
@@ -147,7 +168,7 @@ class UserPresenter extends BasePresenter
 
     public function actionSettings()
     {
-        $data = $this->getLoggedUserData();
+        $data = $this->userManager->getLoggedUserData($this->getUser()->getId());
         $this['generalSettingsForm']->setDefaults($data);
         $this['informationSettingsForm']->setDefaults($data);
         $this['connectionsSettingsForm']->setDefaults($data);
@@ -209,7 +230,7 @@ class UserPresenter extends BasePresenter
             }
         }
         else{
-            $this->flashMessage('Uups something went wrong');
+            $this->flashMessage('Uups something went wrong', 'alert-danger');
 
             $this->redirect('User:settings');
         }

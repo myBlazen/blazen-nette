@@ -144,3 +144,29 @@ setTimeout(function (){
 $('#friendsCarousel').carousel({
     interval: 0
 })
+
+$('.friends-slick-carousel').slick({
+    prevArrow: $('.friends-slick-carousel-prev'),
+    nextArrow: $('.friends-slick-carousel-next'),
+    arrows: true,
+    dots: false,
+    autoplay: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1
+            }
+        }
+    ]
+});
+

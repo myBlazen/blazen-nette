@@ -5,9 +5,10 @@ namespace App\Presenters;
 use Nette;
 use Nette\Database\Context;
 use App\Model\PostManager;
+use App\Model\UserManager;
 use Nette\Application\UI\Form;
 
-class PostPresenter extends BasePresenter
+final class PostPresenter extends BasePresenter
 {
     /**
      * @var Context
@@ -20,15 +21,21 @@ class PostPresenter extends BasePresenter
     private $postManager;
 
     /**
+     * @var UserManager
+     */
+    private $userManager;
+
+    /**
      * PostPresenter constructor.
      * @param Context $database
      * @param PostManager $postManager
      */
-    public function __construct(Context $database, PostManager $postManager)
+    public function __construct(Context $database, PostManager $postManager, UserManager $userManager)
     {
-        parent::__construct($database);
+        parent::__construct($database, $userManager);
         $this->database = $database;
         $this->postManager = $postManager;
+        $this->userManager = $userManager;
     }
 
     public function beforeRender()
@@ -83,7 +90,7 @@ class PostPresenter extends BasePresenter
 
         $values = null;
 
-        $this->flashMessage('Comment was published');
+        $this->flashMessage('Comment was published', 'alert-success');
 
         $this->redirect('Post:show?wall_post_id=' . $redirect);
 
@@ -158,7 +165,7 @@ class PostPresenter extends BasePresenter
         $post = $this->database->table('wall_posts')->get($wall_post_id);
         $post->update($values);
 
-        $this->flashMessage('Your post was deleted');
+        $this->flashMessage('Your post was deleted','alert-success');
 
         $this->redirect('Homepage:');
     }
@@ -183,7 +190,7 @@ class PostPresenter extends BasePresenter
         $post = $this->database->table('wall_posts')->get($wall_post_id);
         $post->update($values);
 
-        $this->flashMessage('Your post was hidden, you can still see your post on your timeline but nobody else');
+        $this->flashMessage('Your post was hidden, you can still see your post on your timeline but nobody else do!', 'alert-info');
 
         $this->redirect('Homepage:#'. $wall_post_id);
     }
@@ -203,7 +210,7 @@ class PostPresenter extends BasePresenter
         $post = $this->database->table('wall_posts')->get($wall_post_id);
         $post->update($values);
 
-        $this->flashMessage('Your post is visible again!');
+        $this->flashMessage('Your post is visible again!', 'alert-success');
 
         $this->redirect('Homepage:#'. $wall_post_id);
     }
