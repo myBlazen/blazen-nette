@@ -4,14 +4,21 @@
 
     <div class="friends-slick-carousel row">
         <div n:foreach="$randomUsers AS $randomUser" id="{$randomUser->username}" class="col">
-            <div class="card">
+            <div class="card shadow-sm">
+                <div class="card-img">
+
+                </div>
                 <img class="card-img rounded-circle mt-2 w-50 align-self-center"
                      src="{$basePath . $randomUser->user_profile_img_path}"
                      alt="Card image cap"
                 />
+                <hr class="mb-0">
                 <div class="card-body">
                     <h5 class="card-title">{$randomUser->firstname . ' ' . $randomUser->lastname}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{$randomUser->username}</h6>
+                    <p class="card-subtitle text-muted">{$randomUser->username}</p>
+
+                </div>
+                <div class="card-footer">
                     <a n:href="User:profile $randomUser->username" class="btn btn-primary">Show Profile</a>
                     <a href="" class="btn btn-outline-primary float-right">+</a>
                 </div>
