@@ -20,16 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/PostManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/PostManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/FindPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/FindPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile/friends.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/friends.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile/profileHeader.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/profileHeader.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/find/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/find/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +180,7 @@
       <workItem from="1620728482870" duration="33000" />
       <workItem from="1620730548778" duration="8000" />
       <workItem from="1620730887655" duration="3038000" />
-      <workItem from="1620733961672" duration="8805000" />
+      <workItem from="1620733961672" duration="10962000" />
     </task>
     <servers />
   </component>

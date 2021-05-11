@@ -114,7 +114,8 @@ autosize(document.getElementsByClassName("comment-textarea"));
 $('.comment-textarea').keypress(function(e){
 
     if(e.key === 'Enter' && !e.shiftKey) {
-        if(e.valueAsString){
+
+        if(1){
             this.form.submit();
             this.form.innerText = "";
         }
