@@ -24,7 +24,7 @@ class PostManager
 //--------------------------------------------------------------------------------------------------------------------->
 
     /**
-     * @return Nette\Database\IRow
+     * @return Nette\Database\IRow[]|null
      */
     public function getPublicPosts()
     {
@@ -55,7 +55,6 @@ class PostManager
 
         foreach($posts as $post){
             $post->comments = $this->getPostComments($post->wall_post_id);
-
         }
         return $posts;
     }

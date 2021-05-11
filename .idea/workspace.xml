@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/PostManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/PostManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/FindPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/FindPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile/friends.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/friends.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile/profileHeader.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/profileHeader.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/find/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/find/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +81,11 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql.8" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chat-nette-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -173,7 +181,14 @@
       <workItem from="1616951623872" duration="1915000" />
       <workItem from="1617023180337" duration="5037000" />
       <workItem from="1617042486041" duration="2057000" />
-      <workItem from="1617192514999" duration="20952000" />
+      <workItem from="1617192514999" duration="48711000" />
+      <workItem from="1617282994718" duration="16543000" />
+      <workItem from="1618205700389" duration="4764000" />
+      <workItem from="1618210584436" duration="5838000" />
+      <workItem from="1620728482870" duration="33000" />
+      <workItem from="1620730548778" duration="8000" />
+      <workItem from="1620730887655" duration="3038000" />
+      <workItem from="1620733961672" duration="8805000" />
     </task>
     <servers />
   </component>
@@ -191,5 +206,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

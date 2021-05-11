@@ -102,4 +102,14 @@ abstract class BasePresenter extends Presenter
     {
         return $post_user_id == $this->getUser()->getId();
     }
+
+    /**
+     * @param $user_id
+     * @return bool
+     */
+    public function isUserProfile($user_id):bool
+    {
+        if($user_id == null) return true;
+        return $user_id == $this->getUser()->getId();
+    }
 }

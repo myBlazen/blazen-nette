@@ -1,7 +1,168 @@
 <div class="row pt-3">
     <div class="col d-inline-block">
         <h1 class="d-inline">Friends</h1>
-        <a n:href="Find:" class="btn btn-outline-primary float-right">Najít Přátele</a>
+        <a n:if="$isUserProfile" n:href="Find:" class="btn btn-outline-primary float-right">Najít Přátele</a>
     </div>
 </div>
+<div n:if="$isUserProfile" class="row">
+    <div class="col-lg-4">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-text">
+                            Received
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div n:foreach="$userFriendRequests['userSentFriendRequests'] as $request">
+                            <div class="row m-0">
+                                <div class="col-2">
+                                    <img class="w-100 rounded-circle" src="{$basePath . $request->user_profile_img_path}" alt="user profile image">
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <a n:href="User:profile $request->username" class="">{$request->username}</a>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">{$request->created_at|date:'F j, Y'}</small>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row justify-content-end">
+                                        <!-- Accept Friend Request -->
+                                        <a n:href="Find:acceptFriendRequest $request->friendship_id"
+                                                class="btn btn-outline-primary mr-2" title="Accept friend request"><i class="fas fa-user-check"></i>
+                                        </a>
+                                        <!-- Cancel Friend Request -->
+                                        <a n:href="Find:cancelFriendRequest $request->friendship_id"
+                                                class="btn btn-outline-primary" title="Decline friend request"><i class="fas fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mt-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-text">
+                            Sent
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div n:foreach="$userFriendRequests['userReceiveFriendRequests'] as $request">
+                            <div class="row m-0">
+                                <div class="col-2">
+                                    <img class="w-100 rounded-circle" src="{$basePath . $request->user_profile_img_path}" alt="user profile image">
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <a n:href="User:profile $request->username" class="">{$request->username}</a>
+                                    </div>
+                                    <div class="row">
+                                        <small class="text-muted">{$request->created_at|date:'F j, Y'}</small>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row justify-content-end">
+                                        <!-- Cancel Friend Request -->
+                                        <a n:href="Find:cancelFriendRequest $request->friendship_id"
+                                                class="btn btn-outline-primary" title="Cancel friend request"><i class="fas fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mt-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-text">
+                    Friends
+                </div>
+            </div>
+            <div class="card-body">
+                <div n:foreach="$friends as $friend">
+                    <div class="row m-0">
+                        <div class="col-2">
+                            <img class="w-100 rounded-circle" src="{$basePath . $friend->user_profile_img_path}" alt="user profile image">
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <a n:href="User:profile $friend->username" class="">{$friend->username}</a>
+                            </div>
+                            <div class="row">
+                                <small class="text-muted">{$friend->created_at|date:'F j, Y'}</small>
+                            </div>
+                        </div>
+                        <div n:if="$isUserProfile" class="col">
+                            <div class="row justify-content-end">
+                                <!-- Remove from Friends -->
+                                <a n:href="Find:cancelFriendRequest $friend->friendship_id"
+                                        class="btn btn-outline-primary" title="Remove from friends"><i class="fas fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div n:if="!$isUserProfile" class="row">
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                Společní přátelé
+            </div>
+            <div class="card-body">
 
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                Přátelé
+            </div>
+            <div class="card-body">
+                <div n:foreach="$friends as $friend">
+                    <div class="row m-0">
+                        <div class="col-2">
+                            <img class="w-100 rounded-circle" src="{$basePath . $friend->user_profile_img_path}" alt="user profile image">
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <a n:href="User:profile $friend->username" class="">{$friend->username}</a>
+                            </div>
+                            <div class="row">
+                                <small class="text-muted">{$friend->created_at|date:'F j, Y'}</small>
+                            </div>
+                        </div>
+                        <div n:if="$isUserProfile" class="col">
+                            <div class="row justify-content-end">
+                                <!-- Remove from Friends -->
+                                <a n:href="Find:cancelFriendRequest $friend->friendship_id"
+                                        class="btn btn-outline-primary" title="Remove from friends"><i class="fas fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -20,7 +20,20 @@
                 </div>
                 <div class="card-footer">
                     <a n:href="User:profile $randomUser->username" class="btn btn-primary">Show Profile</a>
-                    <a href="" class="btn btn-outline-primary float-right">+</a>
+                    <!-- Send Friend Request -->
+                    <a n:if="$randomUser->friendship != 'pending'" n:href="Find:sendFriendRequest $randomUser->username"
+                            class="btn btn-outline-primary float-right" title="Send friend request"><i class="fas fa-user-plus"></i>
+                    </a>
+                    <!-- Cancel Friend Request -->
+                    <a n:if="$randomUser->friendship == 'pending' && $randomUser->user_sent_id == $loggedUserData->user_id"
+                            n:href="Find:cancelFriendRequest $randomUser->friendship_id"
+                            class="btn btn-outline-primary float-right" title="Cancel friend request"><i class="fas fa-user-minus"></i>
+                    </a>
+                    <!-- Accept Friend Request -->
+                    <a n:if="$randomUser->friendship == 'pending' && $randomUser->user_receive_id == $loggedUserData->user_id"
+                            n:href="Find:acceptFriendRequest $randomUser->friendship_id"
+                            class="btn btn-outline-primary float-right" title="Accept friend request"><i class="fas fa-user-friends"></i>
+                    </a>
                 </div>
             </div>
         </div>

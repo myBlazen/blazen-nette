@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - @localhost">
+  <database-model serializer="dbm" dbms="UNKNOWN" family-id="UNKNOWN" format-version="4.20">
+    <root id="1">
+      <ServerVersion>0.0</ServerVersion>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <database id="2" parent="1" name="information_schema"/>
+    <database id="3" parent="1" name="msmdb"/>
+    <database id="4" parent="1" name="mysql"/>
+    <database id="5" parent="1" name="performance_schema"/>
+    <database id="6" parent="1" name="phpmyadmin"/>
+    <database id="7" parent="1" name="wa_chat"/>
+    <database id="8" parent="1"/>
+  </database-model>
+</dataSource>
