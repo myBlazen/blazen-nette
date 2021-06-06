@@ -20,8 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Router/RouterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Router/RouterFactory.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +88,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -91,14 +100,17 @@
       <recent name="C:\www\blazen\www\slick" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\www\blazen\app\Presenters" />
       <recent name="C:\www\blazen\www" />
       <recent name="C:\www\blazen\www\blazen_games" />
       <recent name="C:\www\blazen\www\images" />
       <recent name="C:\www\blazen\www\games" />
-      <recent name="C:\www\blazen\www\users_images\29\profile_image" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\emanu\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="" />
@@ -181,11 +193,26 @@
       <workItem from="1620730548778" duration="8000" />
       <workItem from="1620730887655" duration="3038000" />
       <workItem from="1620733961672" duration="10962000" />
+      <workItem from="1622942509129" duration="21000" />
+      <workItem from="1622942582820" duration="84000" />
+      <workItem from="1622942679318" duration="61000" />
+      <workItem from="1622942742160" duration="2474000" />
+      <workItem from="1622946497691" duration="8947000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

@@ -71,15 +71,13 @@ final class UserPresenter extends BasePresenter
 
     public function RenderProfile(string $username = null): void
     {
-        $this->template->isUserProfile = $this->isUserProfile($this->userManager->getUserIdByUsername($username));
-
-        if($username === null){
+        $isUserProfile = $this->isUserProfile($this->userManager->getUserIdByUsername($username));
+        $this->template->isUserProfile = $isUserProfile;
+        if($isUserProfile){
             $this->template->wall_posts = $this->postManager->getPostsByUser($this->getUser()->getId(),true);
             $this->template->userData = $this->userManager->getLoggedUserData($this->getUser()->getId());
             $this->template->userFriendRequests = $this->userManager->getFriendRequestsForUser($this->getUser()->getId());
             $this->template->friends = $this->userManager->getUserFriends($this->getUser()->getId());
-            bdump($this->userManager->getFriendRequestsForUser($this->getUser()->getId()));
-            bdump($this->userManager->getUserFriends($this->getUser()->getId()));
         }
         else{
             $this->template->wall_posts = $this->postManager->getPublicPostsByUsername($username);
@@ -114,6 +112,7 @@ final class UserPresenter extends BasePresenter
     /**
      * @param Form $form
      * @param \stdClass $values
+     * @throws Nette\Application\AbortException
      */
     public function uploadImageSucceeded(Form $form, \stdClass $values): void
     {

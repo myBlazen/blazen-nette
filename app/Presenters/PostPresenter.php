@@ -29,6 +29,7 @@ final class PostPresenter extends BasePresenter
      * PostPresenter constructor.
      * @param Context $database
      * @param PostManager $postManager
+     * @param UserManager $userManager
      */
     public function __construct(Context $database, PostManager $postManager, UserManager $userManager)
     {

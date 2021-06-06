@@ -52,15 +52,19 @@ class UserManager
 
     /**
      * @param string|null $username
-     * @return array|null
+     * @return int|null
      */
-    public function getUserIdByUsername(string $username = null):?array
+    public function getUserIdByUsername(string $username = null):?int
     {
         if($username == null) return null;
-        return $this->database->table('users')
-            ->select('user_id')
-            ->where('username = ?', $username)
-            ->fetchAll();
+
+        $result = $this->database->query("
+            SELECT user_id
+            FROM users
+            WHERE username = ?
+        ", $username)->fetch();
+
+        return $result['user_id'];
     }
 
     /**

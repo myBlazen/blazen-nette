@@ -1,5 +1,5 @@
 {block content}
-{if $wall_post[0]['hidden'] && !$presenter->isPostOwner($wall_post[0]['post_user_id'])}
+{if $wall_post[0]['hidden'] && !$presenter->isPostOwner($wall_post[0]['post_user_id']) || $wall_post === null}
 
     <div class="invisible" n:block=title>Post Not Found</div>
 
