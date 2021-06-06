@@ -26,12 +26,18 @@ final class RouterFactory
         /**
          * post routes
          */
-        $router->addRoute('post/<wall_post_id>', 'Post:show');
+        $router->addRoute('post/edit/<wall_post_id>', 'Post:edit');
+        $router->addRoute('post/delete', 'Post:delete');
+        $router->addRoute('post/hide', 'Post:hide');
+        $router->addRoute('post/publish', 'Post:publish');
+        $router->addRoute('post[/<wall_post_id>]', 'Post:show');
 
         /**
          * game routes
          */
-        $router->addRoute('games/<game_id>', 'Games:detail');
+        $router->addRoute('games', 'Games:default');
+        $router->addRoute('games/edit/<game_id>', 'Games:edit');
+        $router->addRoute('games[/<game_id>]', 'Games:detail');
 
         /**
          * default route

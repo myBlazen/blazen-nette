@@ -7624,6 +7624,10 @@ button.bg-dark:focus {
     height: 100vh !important;
 }
 
+.vh-50 {
+    height: 50vh !important;
+}
+
 .m-0 {
     margin: 0 !important;
 }

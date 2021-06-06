@@ -1,6 +1,21 @@
 {block content}
 
-<div id="profile">
+
+<div n:if="$userNotFound" class="container-fluid py-5">
+
+    <div class="invisible" n:block=title>User Not Found</div>
+
+    <!-- 404 Error Text -->
+    <div class="text-center">
+        <div class="error mx-auto" data-text="404">404</div>
+        <p class="lead text-gray-800 mb-5">User Not Found</p>
+        <p class="text-gray-500 mb-0">Are you sure this name is not only in your head?</p>
+        <a n:href="Homepage:">&larr; Back to homepage</a>
+    </div>
+
+</div>
+
+<div id="profile" n:if="!$userNotFound">
     <div class="container-fluid">
         <div class="row justify-content-center">
 

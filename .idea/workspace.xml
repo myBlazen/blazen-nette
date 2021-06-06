@@ -20,17 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.dtd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intellij-latte/xmlSources/Latte.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/FindPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/FindPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/GamesPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/GamesPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/find/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/find/default.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Router/RouterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Router/RouterFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +196,7 @@
       <workItem from="1622942679318" duration="61000" />
       <workItem from="1622942742160" duration="2474000" />
       <workItem from="1622946497691" duration="8947000" />
+      <workItem from="1622964622600" duration="7916000" />
     </task>
     <servers />
   </component>

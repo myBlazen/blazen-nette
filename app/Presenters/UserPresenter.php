@@ -72,6 +72,11 @@ final class UserPresenter extends BasePresenter
     public function RenderProfile(string $username = null): void
     {
         $isUserProfile = $this->isUserProfile($this->userManager->getUserIdByUsername($username));
+        if($this->userManager->getUserIdByUsername($username) === null){
+            $this->template->userNotFound = true;
+            return;
+        }
+        $this->template->userNotFound = false;
         $this->template->isUserProfile = $isUserProfile;
         if($isUserProfile){
             $this->template->wall_posts = $this->postManager->getPostsByUser($this->getUser()->getId(),true);

@@ -28,8 +28,10 @@ final class GamesPresenter extends BasePresenter
     private $userManager;
 
     /**
-     * FindPresenter constructor.
+     * GamesPresenter constructor.
      * @param Context $database
+     * @param GameManager $gameManager
+     * @param UserManager $userManager
      */
     public function __construct(Context $database, GameManager $gameManager, UserManager $userManager)
     {
@@ -128,6 +130,7 @@ final class GamesPresenter extends BasePresenter
     /**
      * @param Form $form
      * @param \stdClass $values
+     * @throws Nette\Application\AbortException
      */
     public function uploadGameSucceeded(Form $form, \stdClass $values): void
     {
@@ -241,6 +244,6 @@ final class GamesPresenter extends BasePresenter
 
         $this->flashMessage('Games was successfully updated', 'alert-success');
 
-        $this->redirect('Games:Detail', $values->game_id);
+        $this->redirect('Games:detail', $values->game_id);
     }
 }

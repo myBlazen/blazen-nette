@@ -1,5 +1,5 @@
 {block content}
-<div class="container">
+<div n:if="$randomUsers" class="container">
     <h1>Find Friends</h1>
 
     <div class="friends-slick-carousel row">
@@ -48,5 +48,8 @@
 
     <a href="" class="btn btn-outline-primary mt-3 float-right">Find More</a>
 
+</div>
+<div n:if="!$randomUsers" class="d-flex vh-50 justify-content-center">
+    <h1>Ouha, je tu nějak prázdno, nemyslíš ?</h1>
 </div>
 
