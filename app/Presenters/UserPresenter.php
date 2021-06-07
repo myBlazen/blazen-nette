@@ -105,7 +105,7 @@ final class UserPresenter extends BasePresenter
         $form->addUpload('image','images')
             ->setRequired()
             ->addRule($form::IMAGE, 'Please select file format JPEG, PNG or GIF.')
-            ->addRule($form::MAX_FILE_SIZE, 'Maximum size is 1 MB.', 1024 * 1024);
+            ->addRule($form::MAX_FILE_SIZE, 'Maximum size is 5 MB.', 1024 * 1024 * 5);
 
         $form->addSubmit('uploadImage', 'Upload Image');
 

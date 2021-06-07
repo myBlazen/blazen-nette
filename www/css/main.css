@@ -9781,8 +9781,7 @@ a:focus {
 #wrapper #content-wrapper {
     background-color: #f8f9fc;
     width: 100%;
-    margin-top: 70px;
-    padding-top: 20px;
+    padding-top: 100px;
     margin-left: 14rem;
     overflow-x: hidden;
     transition-duration: 1s;

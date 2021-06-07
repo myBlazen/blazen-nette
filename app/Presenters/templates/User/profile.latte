@@ -1,9 +1,8 @@
 {block content}
 
+<div class="invisible position-absolute" n:block=title>{if $userNotFound}User Not Found{else}{$userData->username}{/if}</div>
 
 <div n:if="$userNotFound" class="container-fluid py-5">
-
-    <div class="invisible" n:block=title>User Not Found</div>
 
     <!-- 404 Error Text -->
     <div class="text-center">
@@ -53,7 +52,7 @@
                 </ul>
 
 
-                <div class="tab-content" id="myTabContent">
+                <div class="tab-content pb-5" id="myTabContent">
                     <div class="tab-pane fade show active" id="timeline" role="tabpanel" aria-labelledby="timeline-tab">
                         {include './profile/timeline.latte'}
                     </div>

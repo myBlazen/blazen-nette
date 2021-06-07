@@ -36,6 +36,7 @@ final class RouterFactory
          * game routes
          */
         $router->addRoute('games', 'Games:default');
+        $router->addRoute('games/create', 'Games:create');
         $router->addRoute('games/edit/<game_id>', 'Games:edit');
         $router->addRoute('games[/<game_id>]', 'Games:detail');
 

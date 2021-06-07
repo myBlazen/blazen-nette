@@ -1,54 +1,66 @@
 {block content}
 <div n:if="$randomUsers" class="container">
-    <h1>Find Friends</h1>
+    <div class="row">
+        <div class="col-12">
+            <h1>Find Friends</h1>
 
-    <div class="friends-slick-carousel row">
-        <div n:foreach="$randomUsers AS $randomUser" id="{$randomUser->username}" class="col">
-            <div class="card shadow-sm">
-                <div class="card-img">
+            <div class="friends-slick-carousel row">
+                <div n:foreach="$randomUsers AS $randomUser" id="{$randomUser->username}" class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-img">
 
-                </div>
-                <img class="card-img rounded-circle mt-2 w-50 align-self-center"
-                     src="{$basePath . $randomUser->user_profile_img_path}"
-                     alt="Card image cap"
-                />
-                <hr class="mb-0">
-                <div class="card-body">
-                    <h5 class="card-title">{$randomUser->firstname . ' ' . $randomUser->lastname}</h5>
-                    <p class="card-subtitle text-muted">{$randomUser->username}</p>
+                        </div>
+                        <img class="card-img rounded-circle mt-2 w-50 align-self-center"
+                             src="{$basePath . $randomUser->user_profile_img_path}"
+                             alt="Card image cap"
+                        />
+                        <hr class="mb-0">
+                        <div class="card-body">
+                            <h5 class="card-title">{$randomUser->firstname . ' ' . $randomUser->lastname}</h5>
+                            <p class="card-subtitle text-muted">{$randomUser->username}</p>
 
-                </div>
-                <div class="card-footer">
-                    <a n:href="User:profile $randomUser->username" class="btn btn-primary">Show Profile</a>
-                    <!-- Send Friend Request -->
-                    <a n:if="$randomUser->friendship != 'pending'" n:href="Find:sendFriendRequest $randomUser->username"
-                            class="btn btn-outline-primary float-right" title="Send friend request"><i class="fas fa-user-plus"></i>
-                    </a>
-                    <!-- Cancel Friend Request -->
-                    <a n:if="$randomUser->friendship == 'pending' && $randomUser->user_sent_id == $loggedUserData->user_id"
+                        </div>
+                        <div class="card-footer">
+                            <a n:href="User:profile $randomUser->username" class="btn btn-primary">Show Profile</a>
+                            <!-- Send Friend Request -->
+                            <a n:if="$randomUser->friendship != 'pending'" n:href="Find:sendFriendRequest $randomUser->username"
+                                    class="btn btn-outline-primary float-right" title="Send friend request"><i class="fas fa-user-plus"></i>
+                            </a>
+                            <!-- Cancel Friend Request -->
+                            <a n:if="$randomUser->friendship == 'pending' && $randomUser->user_sent_id == $loggedUserData->user_id"
                             n:href="Find:cancelFriendRequest $randomUser->friendship_id"
-                            class="btn btn-outline-primary float-right" title="Cancel friend request"><i class="fas fa-user-minus"></i>
-                    </a>
-                    <!-- Accept Friend Request -->
-                    <a n:if="$randomUser->friendship == 'pending' && $randomUser->user_receive_id == $loggedUserData->user_id"
+                                    class="btn btn-outline-primary float-right" title="Cancel friend request"><i class="fas fa-user-minus"></i>
+                            </a>
+                            <!-- Accept Friend Request -->
+                            <a n:if="$randomUser->friendship == 'pending' && $randomUser->user_receive_id == $loggedUserData->user_id"
                             n:href="Find:acceptFriendRequest $randomUser->friendship_id"
-                            class="btn btn-outline-primary float-right" title="Accept friend request"><i class="fas fa-user-friends"></i>
-                    </a>
+                                    class="btn btn-outline-primary float-right" title="Accept friend request"><i class="fas fa-user-friends"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <a href="#" class="btn btn-primary mt-3 mr-3 friends-slick-carousel-prev" type="button">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a href="#" class="btn btn-primary mt-3 friends-slick-carousel-next" type="button">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+
+            <a href="" class="btn btn-outline-primary mt-3 float-right">Find More</a>
         </div>
     </div>
 
-    <a href="#" class="btn btn-primary mt-3 mr-3 friends-slick-carousel-prev" type="button">
-        <i class="fas fa-chevron-left"></i>
-    </a>
-    <a href="#" class="btn btn-primary mt-3 friends-slick-carousel-next" type="button">
-        <i class="fas fa-chevron-right"></i>
-    </a>
 
-    <a href="" class="btn btn-outline-primary mt-3 float-right">Find More</a>
-
+    <div class="row">
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
 </div>
+
+
 <div n:if="!$randomUsers" class="d-flex vh-50 justify-content-center">
     <h1>Ouha, je tu nějak prázdno, nemyslíš ?</h1>
 </div>

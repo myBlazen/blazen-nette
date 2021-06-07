@@ -21,14 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile/profileHeader.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/profileHeader.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/find/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Find/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/find/friends.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Find/friends.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/slick-carousel/slick/slick.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/slick-carousel/slick/slick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/js/conflict-detection.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/js/conflict-detection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/js/conflict-detection.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/js/conflict-detection.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/fontawesome-free/metadata/icons.yml" beforeDir="false" afterPath="$PROJECT_DIR$/www/fontawesome-free/metadata/icons.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/slick-1.8.1/slick/slick.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/slick-1.8.1/slick/slick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/UserPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Find/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Find/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Messages/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Messages/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Post/show.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/navbar.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/sidebar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/sidebar.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Router/RouterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Router/RouterFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +199,7 @@
       <workItem from="1622942742160" duration="2474000" />
       <workItem from="1622946497691" duration="8947000" />
       <workItem from="1622964622600" duration="16669000" />
+      <workItem from="1623037404358" duration="4455000" />
     </task>
     <servers />
   </component>
