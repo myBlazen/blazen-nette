@@ -108,9 +108,12 @@
                         </div>
                         <div n:if="$isUserProfile" class="col">
                             <div class="row justify-content-end">
+                                <!-- Open chat with user -->
+                                <a n:href="Messages:CheckInbox $friend->user_id"
+                                        class="btn btn-outline-primary" title="Write message"><i class="far fa-comment"></i></a>
                                 <!-- Remove from Friends -->
                                 <a n:href="Find:cancelFriendRequest $friend->friendship_id"
-                                        class="btn btn-outline-primary" title="Remove from friends"><i class="fas fa-times"></i>
+                                        class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Remove from friends"><i class="fas fa-times"></i>
                                 </a>
                             </div>
                         </div>

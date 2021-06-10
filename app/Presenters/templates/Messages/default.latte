@@ -1,10 +1,74 @@
 {block content}
-<div class="container">
-    <div class="row">
-        <div class="col-4">
+<div id="messages" class="container-fluid p-0">
+    <div class="row m-0 h-100">
+        <div class="col-3 h-100 border-right bg-gray-200 user-chat-rooms">
+
+            <div n:if="$inboxes"><div n:foreach="$inboxes AS $inbox" id="{$inbox->inbox_hash}" to_user_id="{$inbox->to_user_id}" class="row py-2 user-chat-room">
+                <div class="col-3 d-flex justify-content-center align-self-center">
+                    <img src="{$basePath . $inbox->user_profile_img_path}" class="rounded-circle justify-content-center" width="60px" height="60px">
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row p-0 mt-1 justify-content-between">
+                                <p class="mb-1 text-primary h5">{$inbox->firstname . ' ' . $inbox->lastname}</p>
+                                <p class="mb-1 pr-3">{$inbox->seen}</p>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-9 p-0">
+                                    <p class="mb-0 align-self-center">{$inbox->last_message|shortify:20}...</p>
+                                </div>
+
+{*                                <i class="fas fa-check text-success pr-3 justify-content-center "></i>*}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+
+
+
 
         </div>
-        <div class="col-8">
+
+        <div class="col-6 p-0">
+            <div id="message-history" class="p-0">
+                <div id="loader">
+                    <img src='{$basePath}/images/loader-blue.gif' width="100px" height="100px">
+                </div>
+                <div n:if="$messages">
+                <div n:foreach="$messages AS $message" id="{$message->message_id}" class="row m-0">
+                    <div n:class="$presenter->isUserMessage($message->sender_id) ? from-me, message-babble" >
+                        <div class="d-flex message-detail">
+                            <img src="{$basePath . $message->user_profile_img_path}" class="rounded-circle justify-content-center" width="40px" height="40px">
+                            <p class="message-username h5 mb-0 align-self-center">{$message->username}</p>
+                            <small class="text-muted  align-self-center m-0">{$message->sent_time|date:'%X'}</small>
+                        </div>
+                        <div class="arrow-up"></div>
+                        <p class="massage-content">
+                            {$message->message|checkurl}
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+            <div id="message-textarea-wrapper" class="w-100 bg-light">
+                <label for="message-textarea"></label>
+                <form n:name="sentMessage" id="message-textarea-outline" class="bg-light border d-flex mx-3">
+                    <button id="emote-message-button" class="btn"><i class="far fa-smile"></i></button>
+                    <input type="hidden" n:name="to_user_id" id="to_user_id">
+                    <textarea n:name="message" id="message-textarea" class="bg-light w-100 align-self-center message-textarea" rows="1" placeholder="Zpráva..."></textarea>
+                    <button n:name="sentMessage" id="sent-message-button" class="btn"><i class="far fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div class="col-3 border-left">
 
         </div>
     </div>

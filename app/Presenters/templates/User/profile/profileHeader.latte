@@ -7,10 +7,13 @@
             <div class="d-flex">
                 <h4 class="m-0 text-light">{$userData->firstname} {$userData->lastname}</h4>
 
-                <h4 class="m-0 text-light ml-auto mr-3">1 254</h4>
+                <h4 class="m-0 text-light ml-auto mr-3"></h4>
+                <!-- Open chat with user -->
+                <a n:href="Messages:CheckInbox $userData->user_id"
+                        class="btn btn-outline-light btn-sm" title="Write message"><i class="far fa-comment"></i></a>
+                <!-- Remove from Friends -->
                 <a n:if="!$isUserProfile" type="button" n:href="Find:sendFriendRequest $userData->username"
-                        class="btn btn-outline-light btn-sm"><i class="fas fa-thumbs-up mr-1"></i>Follow</a>
-                <h5 class="text-white" n:if="$isUserProfile"> <i class="fas fa-thumbs-up mr-1"></i></h5>
+                        class="btn btn-outline-light btn-sm"><i class="fas fa-thumbs-up mr-1"></i>Add friend</a>
             </div>
 
 
@@ -32,7 +35,7 @@
 
                 <h4 class="m-0 text-light mr-3"></h4>
                 <a n:if="!$isUserProfile" type="button" n:href="Find:sendFriendRequest $userData->username"
-                        class="btn btn-outline-light btn-sm"><i class="fas fa-thumbs-up mr-1"></i>Follow</a>
+                        class="btn btn-outline-light btn-sm"><i class="fas fa-thumbs-up mr-1"></i>Add Friend</a>
             </div>
 
 

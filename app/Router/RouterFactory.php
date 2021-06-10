@@ -41,6 +41,13 @@ final class RouterFactory
         $router->addRoute('games[/<game_id>]', 'Games:detail');
 
         /**
+         * messages routes
+         */
+        $router->addRoute('messages/<action>/<to_user_id>', 'Messages:default');
+        $router->addRoute('messages/<inbox_hash>', 'Messages:default');
+
+
+        /**
          * default route
          */
 		$router->addRoute('<presenter>/<action>[/<id>]', 'Homepage:default');

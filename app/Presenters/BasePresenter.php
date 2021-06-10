@@ -6,6 +6,7 @@ use App\Model\UserManager;
 use Nette\Application\UI\Presenter;
 use Nette\Database\Context;
 use Nette\Http\UrlScript;
+use Latte;
 
 abstract class BasePresenter extends Presenter
 {
@@ -37,6 +38,11 @@ abstract class BasePresenter extends Presenter
             $this->template->loggedUserData = $this->database->table('users')->get($this->getUser()->getId());
             $this->template->isAdmin = $this->isAdmin();
         }
+
+        $this->template->addFilter('shortify', function (string $s = null, int $len = 10): string {
+            return mb_substr($s, 0, $len);
+        });
+
     }
 
     /**
@@ -111,4 +117,16 @@ abstract class BasePresenter extends Presenter
     {
         return $user_id == $this->getUser()->getId();
     }
+
+    /**
+     * @param $user_id
+     * @return bool
+     */
+    public function isUserMessage($user_id):bool
+    {
+        return $user_id == $this->getUser()->getId();
+    }
+
+
+
 }

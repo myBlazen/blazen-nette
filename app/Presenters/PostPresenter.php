@@ -82,6 +82,7 @@ final class PostPresenter extends BasePresenter
     /**
      * @param Form $form
      * @param array $values
+     * @throws Nette\Application\AbortException
      */
     public function commentPostFormSucceeded(Form $form, array $values): void
     {
@@ -97,6 +98,9 @@ final class PostPresenter extends BasePresenter
 
     }
 
+    /**
+     * @return Form
+     */
     public function createComponentEditPostForm(): Form
     {
         $form = new Form;
@@ -116,6 +120,11 @@ final class PostPresenter extends BasePresenter
         return $form;
     }
 
+    /**
+     * @param Form $form
+     * @param array $values
+     * @throws Nette\Application\AbortException
+     */
     public function editPostFormSucceeded(Form $form, array $values):void
     {
         $wall_post_id = $this->getParameter('wall_post_id');

@@ -1,0 +1,24 @@
+{
+  "name": "blazen",
+  "version": "1.0.0",
+  "description": "Social media ",
+  "main": "main.js",
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myBlazen/blazen"
+  },
+  "keywords": [
+    "blazen",
+    "social",
+    "media"
+  ],
+  "author": "Emenauel Neumann",
+  "license": "ISC"
+}

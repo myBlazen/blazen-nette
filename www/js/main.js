@@ -109,7 +109,14 @@
 
 //-------------------------------------------AutosizeCommentTextarea--------------------------------------------------->
 
-autosize(document.getElementsByClassName("comment-textarea"));
+// autosize(document.getElementsByClassName("comment-textarea"));
+// autosize(document.getElementsByClassName("message-textarea"));
+
+$('textarea').each(function(){
+    autosize(this);
+}).on('autosize:resized', function(){
+    console.log('textarea height updated');
+});
 
 $('.comment-textarea').keypress(function(e){
 
@@ -168,4 +175,8 @@ $('.friends-slick-carousel').slick({
         }
     ]
 });
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
 

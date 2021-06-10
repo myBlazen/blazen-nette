@@ -73,7 +73,7 @@ final class FindPresenter extends BasePresenter
     }
 
     /**
-     * @param $request_id
+     * @param int $request_id
      * @throws AbortException
      */
     public function ActionCancelFriendRequest(int $request_id)

@@ -1,0 +1,123 @@
+#messages{
+  margin-top: -30px;
+  height: calc(100vh - 70px);
+  max-width: 1920px;
+  overflow-y: hidden;
+}
+#message-textarea-wrapper{
+  box-shadow: 0 -0.15rem 1.75rem 0 rgb(58 59 69 / 15%) !important;
+  position: absolute;
+  bottom: 0;
+}
+#message-textarea{
+  resize: none;
+  outline: none;
+  border: none;
+  max-height: 120px;
+}
+#message-textarea:focus{
+  outline: none;
+}
+#message-textarea-outline{
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 5px;
+}
+#emote-message-button:focus, #sent-message-button:focus{
+  box-shadow: none;
+}
+#emote-message-button:hover, #sent-message-button:hover{
+
+}
+#message-history{
+  position: absolute;
+  height: auto;
+  max-height: calc(100vh - 70px - 95px);
+  overflow-y: scroll;
+  width: 100%;
+}
+.message-babble{
+  margin-left: 25px;
+  max-width: 75%;
+}
+.message-detail{
+  margin-bottom: 8px;
+}
+.message-detail{
+  margin-bottom: 8px;
+}
+.message-detail img {
+  margin-right: 10px;
+}
+.from-me .message-detail img{
+  margin-right: unset;
+  margin-left: 10px;
+}
+.message-detail p {
+  margin-right: 10px;
+}
+.from-me .message-detail p{
+  margin-right: unset;
+  margin-left: 10px;
+}
+.massage-content{
+  border-radius: 10px;
+  padding: .8rem;
+  background-color: #eaecf4;
+  margin-right: auto;
+}
+.from-me .massage-content{
+  background-color: #4e73df!important;
+  color: #eaecf4;
+}
+.from-me{
+  float: right;
+  margin-left: auto;
+  margin-right: 25px;
+}
+.from-me > :first-child{
+  flex-direction: row-reverse;
+}
+.arrow-up {
+  margin-left: 8px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #eaecf4;
+}
+.from-me .arrow-up{
+  margin-left: auto;
+  margin-right: 8px;
+  border-bottom: 12px solid #4e73df;
+}
+
+.user-chat-room.active{
+  background-color: #d1d3e2!important;
+  border-left: #858796 solid 6px!important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px!important;
+  transition: .3s;
+}
+.user-chat-room:hover{
+  background-color: #dddfeb;
+  border-left: #b7b9cc solid 6px;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.user-chat-rooms{
+  overflow-y: scroll;
+}
+#message-history #loader{
+  display:none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(0,0,0,.1);
+}
+#message-history #loader img{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

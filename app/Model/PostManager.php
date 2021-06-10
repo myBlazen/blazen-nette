@@ -2,7 +2,6 @@
 
 namespace App\Model;
 
-use mysql_xdevapi\DatabaseObject;
 use Nette;
 
 class PostManager

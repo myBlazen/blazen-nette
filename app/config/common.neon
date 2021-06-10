@@ -23,3 +23,4 @@ services:
 	- App\Model\PostManager
 	- App\Model\GameManager
 	- App\Model\UserManager
+	- App\Model\MessagesManager
