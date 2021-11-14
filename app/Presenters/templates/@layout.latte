@@ -73,7 +73,7 @@
 	<!-- End of Page Wrapper -->
 
 	</div>
-	<div n:if="!$user->isLoggedIn()">
+	<div n:if="!$user->isLoggedIn()" class="pt-5">
 		{include content}
 	</div>
 
@@ -97,6 +97,11 @@
 		<!-- Slick JS -->
 		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="{$basePath}/slick-1.8.1/slick/slick.min.js"></script>
+
+		<!-- NETTE AJAX -->
+		<script type="text/javascript" src="{$basePath}/js/nette.ajax.js"></script>
+
+		<script type="text/javascript" src="{$basePath}/moment/min/moment.min.js"></script>
 
 		<!-- Custom JS -->
 		<script type="text/javascript" src="{$basePath}/js/main.js"></script>

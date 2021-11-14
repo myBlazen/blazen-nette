@@ -18,6 +18,9 @@
 
                 <div class="card shadow mb-4">
                     <!-- Card Header - Dropdown -->
+
+
+
                     <div class="card-header py-3 flex-row align-items-center justify-content-between">
                         <div class="d-flex">
                             <img n:if="$loggedUserData->user_profile_img_path != null" class="img-profile rounded-circle mr-3" src="{$basePath . $loggedUserData->user_profile_img_path}" height="50px" width="50px" alt="profile img">
@@ -48,12 +51,12 @@
 
 
                 {include '../postModal.latte'}
-
-
-                <!-- Wall Post -->
-                {include '../post.latte'}
-
-
+                <div id="wall-posts">
+                    {snippet wallPosts}
+                        <!-- Wall Post -->
+                        {include '../post.latte'}
+                    {/snippet}
+                </div>
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex flex-row justify-content-end">
                         <a href="#"> Další příspěvky...</a>

@@ -45,6 +45,10 @@ abstract class BasePresenter extends Presenter
 
     }
 
+    public function handleRefresh(){
+
+    }
+
     /**
      * @return bool
      */

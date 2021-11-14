@@ -180,3 +180,105 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
 
+//-------------------------------warframe------------------------------------------------------------------------------>
+
+
+const futureCycles = 140;
+const day = 100 * 60 * 1000;
+const night = 50 * 60 * 1000;
+const format = 'ddd, MMM D, YYYY h:mm A';
+const timeFormat = 'ddd, MMM D, YYYY h:mm:ss A';
+
+let expiry,
+    nextCycle,
+    nextCycleType,
+    currCycleType,
+    nextMoment,
+    nextMomentMil,
+    str = ``;
+updateTime();
+$.ajax({
+    async : false,
+    url:'https://api.warframestat.us/pc/cetusCycle',
+    beforeSend: () => {
+        $('.timetable').addClass('loader');
+    }
+}).done(data => {
+
+
+
+    $('.timetable').removeClass('loader');
+
+    nextCycle = data.expiry;
+    nextCycleType = (data.isDay) ? 'night' : 'day';
+    currCycleType = (data.isDay) ? 'Day' : 'Night';
+    nextMoment = moment(nextCycle);
+    nextMomentMil = nextMoment.valueOf();
+    expiry = moment(data.expiry).valueOf();
+
+    $('.now .dn').text(currCycleType);
+
+}).fail(function(){
+    console.log('error', arguments);
+});
+
+function showNotification() {
+    const notification = new Notification("New message incoming", {
+        body: "Hi there. How are you doing?",
+        icon: ""
+    })
+}
+
+function updateTime(){
+    let timer, countdown, cdStr;
+
+    if(expiry){
+
+        timer = expiry - moment().valueOf();
+        countdown = moment.duration(timer);
+        cdStr = `
+            ${(countdown.hours() > 0) ? countdown.hours() + 'h' : ''} 
+            ${(countdown.minutes() >= 0) ? countdown.minutes() + 'm' : ''} 
+            ${(countdown.seconds() >= 0) ? countdown.seconds() + 's' : ''}
+        `;
+        $('.now .timeleft').text(cdStr);
+
+        document.title = currCycleType + " |" + cdStr;
+
+        if(countdown.abs() <= 0){
+            showNotification();
+        }
+
+    }
+
+
+
+    $('.time').text(time());
+
+}
+
+function time(){
+    return moment().format(timeFormat);
+}
+
+function refreshCetusCycle(){
+    updateTime();
+    $.nette.ajax({
+        type: "POST",
+        dataType: "json",
+        url: '?do=refreshCetusCycle'
+    });
+}
+
+$(function () {
+
+    var cetusCycle = document.getElementById('cetusCycle');
+    if(cetusCycle){
+        if(cetusCycle.style.display != "none"){
+            window.setInterval(function (){
+                refreshCetusCycle()
+            },1000)
+        }
+    }
+
+});

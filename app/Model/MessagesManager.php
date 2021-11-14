@@ -161,7 +161,7 @@ class MessagesManager{
             FROM messages m 
             JOIN users u ON m.sender_id = u.user_id
             WHERE inbox_hash = ?
-            ORDER BY sent_time ASC
+            ORDER BY sent_time DESC
         ";
         $messages = $this->database->query($query, $inbox_hash)->fetchAll();
 

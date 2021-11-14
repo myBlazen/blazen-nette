@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="MySQL - @localhost">
-  <database-model serializer="dbm" dbms="UNKNOWN" family-id="UNKNOWN" format-version="4.20">
+  <database-model serializer="dbm" dbms="UNKNOWN" family-id="UNKNOWN" format-version="4.23">
     <root id="1">
       <ServerVersion>0.0</ServerVersion>
       <DefaultCasing>lower/lower</DefaultCasing>

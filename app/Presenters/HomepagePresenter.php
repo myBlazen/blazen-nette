@@ -50,6 +50,12 @@ final class HomepagePresenter extends BasePresenter
         }
     }
 
+    public function handleRefreshWallPosts(){
+        if($this->isAjax()){
+            $this->redrawControl('wallPosts');
+        }
+    }
+
 
     public function renderDefault():void
     {

@@ -20,23 +20,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="disable footer, wrapper changes, game create route fix, profile spaceing changes">
-      <change afterPath="$PROJECT_DIR$/app/Model/MessagesManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/css/messages.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/js/messages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/EventsPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/WarframePresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Events/default.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Warframe/default.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/moment/min/locales.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/moment/min/locales.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/moment/min/locales.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/moment/min/moment-with-locales.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/moment/min/moment-with-locales.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/moment/min/moment-with-locales.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/moment/min/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/moment/min/moment.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/596671e6-cc29-4fb3-92c6-b3865de878a0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/596671e6-cc29-4fb3-92c6-b3865de878a0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/PostManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/PostManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/MessagesManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/MessagesManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/FindPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/FindPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/MessagesPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/MessagesPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/PostPresenter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Messages/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Messages/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile/friends.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/friends.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/User/profile/profileHeader.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/User/profile/profileHeader.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Router/RouterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Router/RouterFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/sidebar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/sidebar.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/messages.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +59,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -92,18 +110,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/www/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/www/moment" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\www\blazen\www\moment" />
       <recent name="C:\www\blazen\www\blazen_games" />
       <recent name="C:\www\blazen\www\images" />
       <recent name="C:\www\blazen\www\js" />
       <recent name="C:\www\blazen\www\css" />
-      <recent name="C:\www\blazen\www\slick" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\www\blazen\www\css" />
@@ -209,7 +228,23 @@
       <workItem from="1623121912628" duration="30998000" />
       <workItem from="1623224385976" duration="26636000" />
       <workItem from="1623260641001" duration="605000" />
-      <workItem from="1623300235334" duration="17025000" />
+      <workItem from="1623300235334" duration="43910000" />
+      <workItem from="1623397987758" duration="3000" />
+      <workItem from="1623398260153" duration="6000" />
+      <workItem from="1623398402883" duration="60000" />
+      <workItem from="1623399781926" duration="40000" />
+      <workItem from="1623399833386" duration="1223000" />
+      <workItem from="1623401212556" duration="94000" />
+      <workItem from="1623411162137" duration="4000" />
+      <workItem from="1623418677313" duration="146000" />
+      <workItem from="1623425165694" duration="58000" />
+      <workItem from="1623425233056" duration="7168000" />
+      <workItem from="1623570365348" duration="592000" />
+      <workItem from="1623570996822" duration="3642000" />
+      <workItem from="1636482129887" duration="1410000" />
+      <workItem from="1636512682475" duration="813000" />
+      <workItem from="1636594142295" duration="123000" />
+      <workItem from="1636869413097" duration="12772000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,13 @@
     <div class="row m-0 h-100">
         <div class="col-3 h-100 border-right bg-gray-200 user-chat-rooms">
 
-            <div n:if="$inboxes"><div n:foreach="$inboxes AS $inbox" id="{$inbox->inbox_hash}" to_user_id="{$inbox->to_user_id}" class="row py-2 user-chat-room">
+            {snippet inboxes}
+            <div n:if="$inboxes"><div n:foreach="$inboxes AS $inbox"
+                        id="{$inbox->inbox_hash}"
+                        to_user_id="{$inbox->to_user_id}"
+                        onclick="selectInbox(this)"
+                        n:class="$presenter->isActive($inbox->inbox_hash) ? 'active', 'row py-2 user-chat-room'">
+
                 <div class="col-3 d-flex justify-content-center align-self-center">
                     <img src="{$basePath . $inbox->user_profile_img_path}" class="rounded-circle justify-content-center" width="60px" height="60px">
                 </div>
@@ -25,6 +31,7 @@
                     </div>
                 </div>
             </div></div>
+            {/snippet}
 
 
 
@@ -37,6 +44,7 @@
                 <div id="loader">
                     <img src='{$basePath}/images/loader-blue.gif' width="100px" height="100px">
                 </div>
+                {snippet messages}
                 <div n:if="$messages">
                 <div n:foreach="$messages AS $message" id="{$message->message_id}" class="row m-0">
                     <div n:class="$presenter->isUserMessage($message->sender_id) ? from-me, message-babble" >
@@ -47,14 +55,14 @@
                         </div>
                         <div class="arrow-up"></div>
                         <p class="massage-content">
-                            {$message->message|checkurl}
+                            {$message->message}
                         </p>
                     </div>
                 </div>
                 </div>
-
+                {/snippet}
             </div>
-
+            {snippet messagesbox}
             <div id="message-textarea-wrapper" class="w-100 bg-light">
                 <label for="message-textarea"></label>
                 <form n:name="sentMessage" id="message-textarea-outline" class="bg-light border d-flex mx-3">
@@ -64,6 +72,7 @@
                     <button n:name="sentMessage" id="sent-message-button" class="btn"><i class="far fa-paper-plane"></i></button>
                 </form>
             </div>
+            {/snippet}
         </div>
 
 
@@ -73,3 +82,13 @@
         </div>
     </div>
 </div>
+
+<script>
+
+
+
+
+
+
+
+</script>
