@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Model",
+    "\\app\\Presenters",
+    "\\app\\Presenters\\templates",
+    "\\www"
+  ],
+  "SelectedNode": "\\app\\Presenters\\UserPresenter.php",
+  "PreviewInSolutionExplorer": false
+}

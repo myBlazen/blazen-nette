@@ -20,33 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369ec3f7-410c-4a7c-8a95-d5228c614816" name="Default Changelist" comment="disable footer, wrapper changes, game create route fix, profile spaceing changes">
-      <change afterPath="$PROJECT_DIR$/app/Presenters/EventsPresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/WarframePresenter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Events/default.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Presenters/templates/Warframe/default.latte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/moment/min/locales.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/moment/min/locales.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/moment/min/locales.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/moment/min/moment-with-locales.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/moment/min/moment-with-locales.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/moment/min/moment-with-locales.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/moment/min/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/moment/min/moment.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/596671e6-cc29-4fb3-92c6-b3865de878a0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/596671e6-cc29-4fb3-92c6-b3865de878a0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/MessagesManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/MessagesManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/BasePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/MessagesPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/MessagesPresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/@layout.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Homepage/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/Messages/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/Messages/default.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/sidebar.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/sidebar.latte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/js/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/messages.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +219,7 @@
       <workItem from="1636482129887" duration="1410000" />
       <workItem from="1636512682475" duration="813000" />
       <workItem from="1636594142295" duration="123000" />
-      <workItem from="1636869413097" duration="12772000" />
+      <workItem from="1636869413097" duration="15079000" />
     </task>
     <servers />
   </component>
